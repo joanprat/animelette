@@ -1,0 +1,33 @@
+CRITICAL - 2022-05-11 09:54:44 --> Illegal string offset 'nameJap'
+#0 C:\wamp64\www\animelette\app\Views\testDB.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\wamp64\\www\\a...', 13, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('testDB', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(12): view('testDB', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-11 09:55:11 --> Uninitialized string offset: 1
+#0 C:\wamp64\www\animelette\app\Views\testDB.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\wamp64\\www\\a...', 13, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('testDB', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(12): view('testDB', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-11 09:55:34 --> Undefined variable: allanime
+#0 C:\wamp64\www\animelette\app\Views\testDB.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 13, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('testDB', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(12): view('testDB', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
