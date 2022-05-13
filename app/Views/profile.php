@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/custom-styles.css')?>">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
 </head>
-<?php $fullPath = base_url('Home/') ?>
-<body>
+<?php $fullPath = base_url('Home') ?>
+<body class="login-body">
     <nav class="navbar navbar-expand-lg">
         <div class="container text-cemter">
-            <a class="navbar-brand" href="<?= $fullPath ?>">ANIMELETTE</a>
+            <a class="navbar-brand" href="index">ANIMELETTE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -54,8 +54,8 @@
         </div>
     </nav>
     <section class="container text-center mt-4">
-        <!-- // ! TODO - Branch home -->
-        <p style="color: #F03ADF; font-size: 4em; font-weight: 900;">&#60 Home building in progress &#62</p>
+        <!-- // ! TODO - Branch userprofile -->
+        <p style="color: #F03ADF; font-size: 4em; font-weight: 900;">&#60 User Profile building in progress &#62</p>
     </section>
 </body>
 </html>
