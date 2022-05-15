@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/custom-styles.css')?>">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
 </head>
 <?php $fullPath = base_url('Home') ?>
@@ -80,65 +80,96 @@
                                     </div>
                                 </div>
                             </div>
-                            </div>
-                        </div>                  
-                    </div>
+                        </div>
+                    </div>                  
+                </div>
                 
                 <div class="col-xl-6 col-lg-12 align-self-center text-start">
-                    <div class="container p-5">
-                        <p class="main pb-3">Login</p>
-                        <p class="sub pb-3">Welcome back! We have prepared some fresh stuff for you ;)</p>
-                        <?= form_open('Home/login') ?>
+                    <div class="container px-5">
+                        <p class="main pb-2 mb-0">New Account</p>
+                        <p class="sub pb-2 mb-0">Welcome to our site (･‿･) this is gonna be really quick!</p>
+                        <?= form_open('Home/register') ?>
                             <div class="mb-4">
                                 <label for="username" class="form-label visually-hidden">Username</label>
+                                <?php if (isset($error)) { echo "<p class=\"error-form text-start\">Seems that some data is missing or is incorrect, check if everything is ok</p>"; }?>
                                 <?= form_input(
                                         'username',
-                                        '',
-                                        $att = ['class' => 'form-control shadow-none p-3','placeholder' => 'Username', 'id' => 'username'],
+                                        !isset($dataPost['username']) ? '' : $dataPost['username'],
+                                        $att = ['class' => 'form-control shadow-none p-3','placeholder' => 'Write a cool name such as "Ninja spaghetti"', 'id' => 'username'],
                                         'text'
                                     ) ;
-                                    if (isset($error['username'])) { echo "<p class=\"error-form text-start\">".$error['username']."</p>"; };
+                                    if (isset($error['username']) && $error['username'] == '*This username is already taken, sorry but you must choose another one') { echo "<p class=\"error-form text-start\">".$error['username']."</p>"; };
                                 ?>
                             </div>
                             <div class="mb-4">
-                                <label for="passwd" class="form-label visually-hidden">Pssword</label>
+                                <label for="passwd1" class="form-label visually-hidden">Password</label>
                                 <?= form_input(
-                                        'passwd', 
+                                        'passwd1',
                                         '',
-                                        $att = ['class' => 'form-control shadow-none p-3','placeholder' => 'Password', 'id' => 'passwd'],
+                                        $att = ['class' => 'form-control shadow-none p-3','placeholder' => 'Write a super strong password', 'id' => 'passwd1'],
                                         'password'
-                                    );
-                                    if (isset($error['passwd'])) { echo "<p class=\"error-form text-start\">".$error['passwd']."</p>"; };
+                                    ) ;
                                 ?>
                             </div>
-                            <div class="form-check text-start mb-4">
-                                <input class="form-check-input shadow-none" type="checkbox" value="" id="rememberCheckbox">
-                                <label class="form-check-label ms-2" for="rememberCheckbox">
-                                    Remember me
-                                </label>
+                            <div class="mb-4">
+                                <label for="passwd2" class="form-label visually-hidden">Repeat the password</label>
+                                <?= form_input(
+                                        'passwd2',
+                                        '',
+                                        $att = ['class' => 'form-control shadow-none p-3','placeholder' => 'Repeat the super strong password', 'id' => 'passwd2'],
+                                        'password'
+                                    ) ;
+                                    if (isset($error['passwd2']) && $error['passwd2'] == '*Both passwords must match') { echo "<p class=\"error-form text-start\">".$error['passwd2']."</p>"; };
+                                ?>
+                            </div>
+                            <!-- Gender and location -->
+                            <div class="row g-3 align-items-center mb-4">
+                                <div class="col-6">
+                                    <label for="gender" class="form-label visually-hidden" require>Gender</label>
+                                    <select class="form-select shadow-none" name="gender" id="gender" aria-label="Coose your gender">
+                                        <option selected disabled>How do you see your self?</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Ninja">Ninja!</option>
+                                    </select>                                    
+                                </div>
+                                <div class="col-6">
+                                    <label for="location" class="form-label visually-hidden">Location</label>
+                                    <select class="form-select shadow-none" name="location" id="location" aria-label="Coose your location" require>
+                                        <option selected disabled>Your place in the world</option>
+                                        <option value="Europe">Europe</option>
+                                        <option value="Asia">Asia</option>
+                                        <option value="Africa">Africa</option>
+                                        <option value="America  ">America</option>
+                                        <option value="Oceania">Oceania</option>
+                                    </select>                                    
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="birth" class="form-label visually-hidden">Birthdate</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text px-4" id="basic-addon1"><span class='bx bxs-cake' id="icon"></span></span>
+                                    <?= form_input(
+                                            'birth',
+                                            !isset($dataPost['birth']) ? '' : $dataPost['birth'],
+                                            $att = ['class' => 'form-control shadow-none p-3','placeholder' => 'Birthdate', 'id' => 'birth', 'min' => '1950-01-01', 'max' => '2012-12-31'],
+                                            'date'
+                                        ) ;
+                                    ?>
+                                </div>
                             </div>
                             <div class="d-grid gap-2 mb-4">
                                 <?= form_input(
-                                    'login',
-                                    'LOG IN',
+                                    'register',
+                                    'JOIN NOW',
                                     $att = ['class' => 'btn btn-purple shadow-none'],
                                     'submit'
                                 ) 
                                 ?>
                             </div>
-                            <!-- <p class="sub">You don't have an account?</p> -->
-                            <div class="d-grid gap-2 mb-4">
-                                <button type="button" class="btn btn-pink shadow-none"><a href="<?= $fullPath."/register" ?>">REGISTER</a></button>
-                            </div>
-                            <div class="d-grid gap-2 mb-4">
-                                <?php
-                                    if(isset($newAccount)){ echo "<button type=\"button\" class=\"btn btn-purple shadow-none\">$newAccount</button>";}
-                                ?>
-                                </div>
-                            <?php if (isset($error['notFound'])) { echo "<p class=\"error-form\">".$error['notFound']."</p>"; };?>
                         <?= form_close() ?>
                     </div>
-                </div>                
+                </div>
             </div>
 
         </article>

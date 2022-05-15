@@ -89,6 +89,47 @@ class Home extends BaseController
       }
     }
 
+    public function register () {
+      if($this->request->getPost('register') != '') {
+        $dataPost = $this->request->getPost();
+
+        $rules = ["username" => "required|is_unique[user.username]", "passwd1" => "required", "passwd2" => "required|matches[passwd1]"];
+
+        $msg = [
+          "username" => ["required" => "*This field can not be empty!", "is_unique" => "*This username is already taken, sorry but you must choose another one"],
+          "passwd1" => ["required" => "*This field can not be empty!"],
+          "passwd2" => ["required" => "*This field can not be empty!", "matches" => "*Both passwords must match"]
+        ];
+
+        if ($this->validate($rules, $msg) && !empty($dataPost['birth']) && isset($dataPost['gender']) && isset($dataPost['location'])) {
+          $newUserData = [
+            'username' => $dataPost['username'],
+            'profilePic' => NULL,
+            'password' => sha1($dataPost['passwd1']),
+            'location' => $dataPost['location'],
+            'gender' => $dataPost['gender'],
+            'birthDate' => $dataPost['birth']
+          ];
+          $tableUser = new UserModel();
+          $tableUser->insert($newUserData);
+          $feedback['newAccount'] = $this->db->affectedRows() > 0 ? "Account created, login using your credentials" : "Error creating new account, try again";
+          return view('login', $feedback);
+        }else {
+          $this->console_log($dataPost);
+          $feedback['error'] = $this->validator->getErrors();
+          $feedback['dataPost'] = $dataPost;
+          if(empty($dataPost['birth'])) {
+            $feedback['error']['birth'] = '*Bad date format';
+          }
+          $this->console_log($feedback['error']);
+          return view('register', $feedback);
+        }
+
+      }else {
+        return view('register');
+      }
+    }
+
     public function logout () {
       $this->session->destroy();
       return view('login');
