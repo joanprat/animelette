@@ -127,7 +127,7 @@
                                 <div class="col-6">
                                     <label for="gender" class="form-label visually-hidden" require>Gender</label>
                                     <select class="form-select shadow-none" name="gender" id="gender" aria-label="Coose your gender">
-                                        <option selected disabled>How do you see your self?</option>
+                                        <option selected disabled>How do you see yourself?</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                         <option value="Ninja">Ninja!</option>
