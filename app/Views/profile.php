@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/custom-styles.css')?>">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>
 <?php $fullPath = base_url('Home') ?>
-<body class="login-body">
-    <nav class="navbar navbar-expand-lg">
+<body class="profile-body">
+    <nav class="navbar navbar-expand-lg nav-background-opacity">
         <div class="container text-cemter">
             <a class="navbar-brand" href="index">ANIMELETTE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,9 +55,137 @@
             </div>
         </div>
     </nav>
-    <section class="container text-center mt-4">
-        <!-- // ! TODO - Branch userprofile -->
-        <p style="color: #F03ADF; font-size: 4em; font-weight: 900;">&#60 User Profile building in progress &#62</p>
+    <section class="container-fluid text-center m-0 p-0">
+        <article class="container-fluid px-0 profile-head">
+            <div class="container-fluid banner px-0">
+                <img class="image-fluid" src="<?= base_url('assets/pictures').'/'.$userData['banner']?>" alt="Banner of the user">
+            </div>
+            <div class="container pfp">
+                <img class="image-fluid" src="<?= base_url('assets/pictures').'/'.$userData['profilePic']?>" alt="Profile picture">
+                <p class="my-2"><?= $userData['username'] ?></p>
+                <p class="engagement my-2"><span class='bx bxs-hot'></span> <?= $userData['engagement'] ?></p>
+            </div> 
+        </article>
+        <article class="container profile-body">
+            <div class="d-flex flex-row">
+                <div class="col-3 d-none d-lg-block">
+                    <div class="container">
+                        <div class="d-flex flex-row">
+                            <button class="btn btn-purple me-2">AnimeList</button>
+                        </div>
+                        <div class="container-fluid white-container my-4 p-4 text-start">
+                            <div class="d-flex flex-row">
+                                <div class="col-6">
+                                    <p class="title me-5">Joined</p>                                    
+                                </div>
+                                <div class="col-6">
+                                    <p><?= $userData['joinDate'] ?></p>                                    
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="col-6">
+                                    <p class="title me-5">Gender</p>                                    
+                                </div>
+                                <div class="col-6">
+                                    <p><?= $userData['gender'] ?></p>                                    
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="col-6">
+                                    <p class="title me-5">Location</p>                                    
+                                </div>
+                                <div class="col-6">
+                                    <p><?= $userData['location'] ?></p>                                    
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="col-6">
+                                    <p class="title me-5">Birthday</p>                                    
+                                </div>
+                                <div class="col-6">
+                                    <p><?= $userData['birthDate'] ?></p>                                    
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row engagement">
+                                <div class="col-6">
+                                    <p class="title me-5">Eng <span class='bx bxs-hot'></span></p>                                    
+                                </div>
+                                <div class="col-6">
+                                    <p><?= $userData['engagement'] ?></p>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="col-lg-9 col-12 white-container right-container p-4">
+                    <div class="container text-start">
+                        <p class="title">Description</p>
+                        <p><?= $userData['bio'] ?></p>
+                    </div>    
+                    <hr class="my-5">
+                    <!-- Graph & statics desktop -->
+                    <div class="container text-start d-none d-md-block">
+                        <p class="title">Anime statics</p>
+                        <div class="d-flex flex-row ">
+                            <div class="container col-7 align-self-center">
+                                <div class="d-flex flex-row graph">
+                                    <div class="col-6">
+                                        <p class="green">Watching</p>
+                                        <p class="blue">Completed</p>
+                                        <p class="yellow">On hold</p>
+                                        <p class="red">Dropped</p>
+                                        <p class="grey">Plan to watch</p>
+                                    </div>     
+                                    <div class="col-6">
+                                        <p>10</p>
+                                        <p>348</p>
+                                        <p>22</p>
+                                        <p>20</p>
+                                        <p>150</p>
+                                    </div>                                       
+                                </div>
+                            </div>
+                            <div class="container col-sm-5 col-12">
+                                <canvas id="myChart" width="400" height="400"></canvas>
+                                <script>
+                                const ctx = document.getElementById('myChart').getContext('2d');
+                                const myChart = new Chart(ctx, {
+                                    type: 'doughnut',
+                                    data: {
+                                        datasets: [{
+                                            label: '# of Votes',
+                                            data: [10, 150, 10, 24, 26],
+                                            backgroundColor: [
+                                                '#95CD41',
+                                                '#548CFF',
+                                                '#FFCC1D',
+                                                '#F32424',
+                                                '#73777B'
+                                            ],
+                                            borderColor: [
+                                                '#95CD41',
+                                                '#548CFF',
+                                                '#FFCC1D',
+                                                '#F32424',
+                                                '#73777B'
+                                            ],
+                                            borderWidth: 2
+                                        }]
+                                    }
+                                });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Graph & statics mobile - <?php // ! TODO ?> -->
+                    <hr class="my-5">
+                    <div class="container text start">
+                        <p class="title">Recent Anime</p>
+                    </div>
+                    </div>                 
+                </div>
+            </div>
+        </article>
     </section>
 </body>
 </html>

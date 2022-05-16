@@ -3,11 +3,12 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\ListModel;
 
 class Home extends BaseController
 {    
     private $db;
-    private $session; 
+    private $session;
     public function __construct(){
       helper('form');
       $this->session=\Config\Services::session();
@@ -46,6 +47,16 @@ class Home extends BaseController
     public function profile () {
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
+        $userTable = new UserModel();
+        $data['userData'] = $userTable->find($this->session->get('userId'));
+
+        $listTable = new ListModel();
+        $data['userData']['watching'] = sizeof($listTable->where('status', 'watching')->findAll());
+        $data['userData']['completed'] = sizeof($listTable->where('status', 'completed')->findAll());
+        $data['userData']['onhold'] = sizeof($listTable->where('status', 'on hold')->findAll());
+        $data['userData']['dropped'] = sizeof($listTable->where('status', 'dropped')->findAll());
+        $data['userData']['planning'] = sizeof($listTable->where('status', 'planning')->findAll());
+        $this->console_log($data);
         return view('profile', $data);
       }
       // ! TODO - Branch userprofile
@@ -104,11 +115,15 @@ class Home extends BaseController
         if ($this->validate($rules, $msg) && !empty($dataPost['birth']) && isset($dataPost['gender']) && isset($dataPost['location'])) {
           $newUserData = [
             'username' => $dataPost['username'],
-            'profilePic' => NULL,
+            'profilePic' => "default.png",
+            'banner' => "default_banner.png",
             'password' => sha1($dataPost['passwd1']),
             'location' => $dataPost['location'],
             'gender' => $dataPost['gender'],
-            'birthDate' => $dataPost['birth']
+            'birthDate' => $dataPost['birth'],
+            'joinDate' => $date = date('d-m-y h:i:s'),
+            'engagement' => 0,
+            'bio' => 'Welcome to my profile!'
           ];
           $tableUser = new UserModel();
           $tableUser->insert($newUserData);
