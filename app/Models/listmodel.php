@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 
 class ListModel extends Model {
     protected $table = 'list';
-    protected $primaryKey = 'isList';
+    protected $primaryKey = 'idList';
     protected $returnType = 'array';
     protected $allowedFields = [
         "refAnime",

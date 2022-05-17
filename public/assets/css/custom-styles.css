@@ -177,6 +177,7 @@ background-color: #f4f4f460;
   font-weight: bold;
   top: -6em;
   position: relative;
+  margin-bottom: -10em;
 }
 .pfp {
   top: -6em;
@@ -225,6 +226,23 @@ background-color: #f4f4f460;
 }
 .grey {
   color: #73777B;
+}
+.anime-box {
+  font-weight: 600;
+}
+.anime-box img{
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #3838388e;
+}
+.anime-box .anime-title {
+  color: #764AF1;
+  font-size: 1.2em;
+}
+.anime-box span {
+  color: #383838;
+}
+.anime-box .score, .score > span {
+  color: #3838388e !important;
 }
 /* ! Custom container */
 .custom-container {

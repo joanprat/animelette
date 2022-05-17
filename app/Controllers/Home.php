@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\ListModel;
+use App\Models\FollowerModel;
 
 class Home extends BaseController
 {    
@@ -44,23 +45,36 @@ class Home extends BaseController
     }
 
     // ? User profile functions
-    public function profile () {
+    public function profile ($refUser) {
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
+        if($refUser == $this->session->get('userId')) {
+          $idUser = $this->session->get('userId');
+        }else {
+          $idUser = $refUser;
+        }
+        
         $userTable = new UserModel();
-        $data['userData'] = $userTable->find($this->session->get('userId'));
-
         $listTable = new ListModel();
-        $data['userData']['watching'] = sizeof($listTable->where('status', 'watching')->findAll());
-        $data['userData']['completed'] = sizeof($listTable->where('status', 'completed')->findAll());
-        $data['userData']['onhold'] = sizeof($listTable->where('status', 'on hold')->findAll());
-        $data['userData']['dropped'] = sizeof($listTable->where('status', 'dropped')->findAll());
-        $data['userData']['planning'] = sizeof($listTable->where('status', 'planning')->findAll());
+        $followerTable = new FollowerModel();
+
+        $data['userData'] = $userTable->find($idUser);
+        $data['recentAnime'] =  $listTable->join('anime', 'anime.idAnime = list.refAnime')
+                                ->where('refUser', $idUser)
+                                ->orderBy('addDate', 'DESC')
+                                ->findAll(10);
+        $data['userData']['followers'] = 0;
+        $data['userData']['followers'] = $followerTable->where('refUser', $idUser)->countAllResults();
+        $data['userData']['watching'] = sizeof($listTable->where(['status' => 'watching', 'refUser' => $idUser])->findAll());
+        $data['userData']['completed'] = sizeof($listTable->where(['status' => 'completed', 'refUser' => $idUser])->findAll());
+        $data['userData']['onhold'] = sizeof($listTable->where(['status' => 'on hold', 'refUser' => $idUser])->findAll());
+        $data['userData']['dropped'] = sizeof($listTable->where(['status' => 'dropped', 'refUser' => $idUser])->findAll());
+        $data['userData']['planning'] = sizeof($listTable->where(['status' => 'planning', 'refUser' => $idUser])->findAll());
         $this->console_log($data);
         return view('profile', $data);
+      }else {
+        return view('login');
       }
-      // ! TODO - Branch userprofile
-      return view('profile');
     }
 
     // ? Login and new account functions

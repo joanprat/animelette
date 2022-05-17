@@ -18,7 +18,7 @@
 <body class="profile-body">
     <nav class="navbar navbar-expand-lg nav-background-opacity">
         <div class="container text-cemter">
-            <a class="navbar-brand" href="index">ANIMELETTE</a>
+            <a class="navbar-brand" href="<?= $fullPath ?>">ANIMELETTE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,7 +42,7 @@
                                         <?= $sessionData->username ?>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a id="profile-option" class="dropdown-item" href="<?= $fullPath."/profile" ?>">Profile</a></li>
+                                        <li><a id="profile-option" class="dropdown-item" href="<?= $fullPath."/profile"."/".$sessionData->userId ?>">Profile</a></li>
                                         <li><a id="profile-option" class="dropdown-item" href="<?= $fullPath."/logout" ?>">Logout</a></li>
                                     </ul>
                                 <?php }else{ ?>
@@ -114,6 +114,14 @@
                                     <p><?= $userData['engagement'] ?></p>                                    
                                 </div>
                             </div>
+                            <div class="d-flex flex-row">
+                                <div class="col-6">
+                                    <p class="title me-5">Followers</p>                                    
+                                </div>
+                                <div class="col-6">
+                                    <p><?= $userData['followers'] ?></p> 
+                                </div>
+                            </div>
                         </div>
                     </div>                    
                 </div>
@@ -127,34 +135,35 @@
                     <div class="container text-start d-none d-md-block">
                         <p class="title">Anime statics</p>
                         <div class="d-flex flex-row ">
-                            <div class="container col-7 align-self-center">
+                            <div class="container col-6 align-self-center text-center">
                                 <div class="d-flex flex-row graph">
                                     <div class="col-6">
                                         <p class="green">Watching</p>
                                         <p class="blue">Completed</p>
                                         <p class="yellow">On hold</p>
                                         <p class="red">Dropped</p>
-                                        <p class="grey">Plan to watch</p>
+                                        <p class="grey">Planning</p>
                                     </div>     
                                     <div class="col-6">
-                                        <p>10</p>
-                                        <p>348</p>
-                                        <p>22</p>
-                                        <p>20</p>
-                                        <p>150</p>
+                                        <p><?= $userData['watching'] ?></p>
+                                        <p><?= $userData['completed'] ?></p>
+                                        <p><?= $userData['onhold'] ?></p>
+                                        <p><?= $userData['dropped'] ?></p>
+                                        <p><?= $userData['planning'] ?></p>
                                     </div>                                       
                                 </div>
                             </div>
-                            <div class="container col-sm-5 col-12">
+                            <div class="container col-sm-6 col-12">
                                 <canvas id="myChart" width="400" height="400"></canvas>
                                 <script>
                                 const ctx = document.getElementById('myChart').getContext('2d');
                                 const myChart = new Chart(ctx, {
                                     type: 'doughnut',
-                                    data: {
+                                    data: {                                            
+                                        labels: ['Watching', 'Completed', 'On Hold', 'Dropped', 'Planning'],
                                         datasets: [{
-                                            label: '# of Votes',
-                                            data: [10, 150, 10, 24, 26],
+                                            label: 'anime',
+                                            data: [<?= $userData['watching'] ?>, <?= $userData['completed'] ?>, <?= $userData['onhold'] ?>, <?= $userData['dropped'] ?>, <?= $userData['planning'] ?>],
                                             backgroundColor: [
                                                 '#95CD41',
                                                 '#548CFF',
@@ -171,6 +180,13 @@
                                             ],
                                             borderWidth: 2
                                         }]
+                                    },
+                                    options: {
+                                        plugins: {
+                                            legend: {
+                                            display: false
+                                            }
+                                        }
                                     }
                                 });
                                 </script>
@@ -179,8 +195,56 @@
                     </div>
                     <!-- Graph & statics mobile - <?php // ! TODO ?> -->
                     <hr class="my-5">
-                    <div class="container text start">
+                    <div class="container text-start">
                         <p class="title">Recent Anime</p>
+                        <?php
+                            foreach ($recentAnime as $key => $anime) {
+                                $txt = '';
+                                $color = '';
+                                switch ($anime['status']) {
+                                    case 'watching':
+                                        $color = 'green';
+                                        $txt = "Watching";
+                                        break;
+                                    case 'completed':
+                                        $color = 'blue';
+                                        $txt = "Completed";
+                                        break;
+                                    case 'on hold':
+                                        $color = 'yellow';
+                                        $txt = "On Hold";
+                                        break;
+                                    case 'dropped':
+                                        $color = 'red';
+                                        $txt = "Dropped";
+                                        break;
+                                    case 'planning':
+                                        $color = 'grey';
+                                        $txt = "Planning";
+                                        break;
+                                }
+                        ?>
+                        <div class="container my-4 anime-box">
+                            <div class="d-flex flex-row">
+                                <div class="col-2 align-self-center me-5">
+                                    <div class="container">
+                                        <img class="img-fluid" src="<?= base_url('assets/img')."/".$anime['img'] ?>" alt="">                                        
+                                    </div>
+                                </div>
+                                <div class="col-10 align-self-center">
+                                    <div class="container">
+                                        <p class="anime-title"><?= $anime['nameJap'] ?></p>
+                                        <div class="d-flex flex-row">
+                                            <p class="<?= $color ?> me-4"><?= $txt ?><span class="mx-2"><?= $anime['episodeSeen']." / ".$anime['totalEpisodes'] ?></span> </p>
+                                            <p class="score">Score<span class="mx-2"><?= $anime['score'] ?></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                            }
+                        ?>
                     </div>
                     </div>                 
                 </div>
