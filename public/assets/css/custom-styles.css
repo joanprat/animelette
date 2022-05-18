@@ -1,4 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+/* ! Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #383838;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #764AF1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #764AF1;
+}
 /* ! Delete or improve */
 .dropdown-menu {
   color: #FFFFFF !important;
@@ -256,7 +273,8 @@ background-color: #f4f4f460;
   box-shadow: 0px 0px 5px #3838388e;
   background-color: #764AF1;
 }
-.anime-box .anime-title {
+.anime-box .anime-title a{
+  text-decoration: none;
   color: #764AF1;
   font-size: 1.2em;
 }
@@ -269,6 +287,100 @@ background-color: #f4f4f460;
 .followers {
   color: #F03ADF !important;
   font-weight: 900;
+}
+/* ? Animelist */
+.animelist-body {
+  color: #383838;
+  background-color: #F4F4F4;
+}
+.navbar-animelist {
+  background-color: #764AF1;
+}
+.navbar-animelist a {
+  color: #FFFFFF;
+  border-top: 4px solid #764AF1;
+  border-bottom: 4px solid #764AF1;
+  text-decoration: none;
+}
+.navbar-animelist .active-item {
+  color: #FFFFFF;
+  border-bottom: 4px solid #FFFFFF !important;
+  text-decoration: none;
+}
+.navbar-animelist a:hover {
+  color: #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
+  text-decoration: none;
+}
+.list {
+  overflow: hidden;
+  font-weight: 700;
+  border-radius: 10px !important;
+  background-color: #FFFFFF;
+}
+.list tr {
+  border-radius: 10px !important;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 4s ease-in-out;
+}
+.list tr:hover{
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  background: linear-gradient(#323232c5, #323232c5), url(../pictures/default_banner.png) no-repeat;
+  background-size: cover;
+}
+.list th {
+  color: #3838388e;
+  padding: 2em !important;
+  border: none;
+}
+.list td {
+  color: #383838 !important;
+  padding: 2em 0em !important;
+  width: 16%;
+}
+.list tr:hover td {
+  color: #FFFFFF !important;
+}
+td > a {
+  color: #764AF1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.list tr:hover td > a {
+  color: #FFFFFF !important;
+}
+td > a:hover {
+  color: #F03ADF;
+  text-decoration: none;
+}
+.list img {
+  border-radius: 10px;
+  margin: auto !important;
+  box-shadow: 0px 0px 5px #3838388e;
+}
+.list .big {
+  width: 100%;
+}
+.list .small {
+  width: 80%;
+}
+.bi {
+  color: #FFFFFF !important;
+  cursor: pointer;
+  transition: 0.3s;
+}
+tr:hover .green-icon {
+  color: #95CD41 !important;
+}
+tr:hover .red-icon {
+  color: #F32424 !important;
+}
+.episode-counter {
+  color: #383838 !important;
+}
+.list tr:hover .episode-counter {
+  color: #FFFFFF !important;
 }
 /* ! Custom container */
 .custom-container {

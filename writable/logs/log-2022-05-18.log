@@ -4,3 +4,112 @@ CRITICAL - 2022-05-18 02:45:41 --> Too few arguments to function App\Controllers
 #2 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #3 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #4 {main}
+CRITICAL - 2022-05-18 04:40:53 --> Undefined variable: userdata
+#0 C:\wamp64\www\animelette\app\Views\animelist.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 61, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('animelist', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(107): view('animelist', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('1', '0')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-18 05:07:00 --> Too few arguments to function App\Controllers\Home::animelist(), 1 passed in C:\wamp64\www\animelette\system\CodeIgniter.php on line 832 and exactly 2 expected
+#0 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('1')
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-18 05:07:36 --> Too few arguments to function App\Controllers\Home::animelist(), 1 passed in C:\wamp64\www\animelette\system\CodeIgniter.php on line 832 and exactly 2 expected
+#0 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('1')
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-18 05:07:45 --> Too few arguments to function App\Controllers\Home::animelist(), 1 passed in C:\wamp64\www\animelette\system\CodeIgniter.php on line 832 and exactly 2 expected
+#0 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('1')
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-18 10:55:40 --> Undefined index: episodesSeen
+#0 C:\wamp64\www\animelette\app\Views\animelist.php(108): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 108, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('animelist', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(145): view('animelist', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('1', '1')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-18 10:55:45 --> Undefined index: episodesSeen
+#0 C:\wamp64\www\animelette\app\Views\animelist.php(108): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 108, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('animelist', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(145): view('animelist', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('1', '1')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-05-18 11:43:12 --> Unknown column 'addDate' in 'order clause'
+CRITICAL - 2022-05-18 11:43:12 --> Unknown column 'addDate' in 'order clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(114): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('1', '1')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-05-18 12:23:49 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\animelist.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 62, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('animelist', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(145): view('animelist', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('img', 'danshikoukousei...')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-18 12:23:54 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\animelist.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 62, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('animelist', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(145): view('animelist', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('img', 'fmab_banner.jpg')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-18 12:23:59 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\animelist.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 62, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('animelist', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(145): view('animelist', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('img', 'danshikoukousei...')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-18 12:24:01 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\animelist.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 62, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('animelist', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(145): view('animelist', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->animelist('img', 'fmab_banner.jpg')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

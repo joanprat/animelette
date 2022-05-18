@@ -73,7 +73,7 @@
                     <!-- User data -->
                     <div class="container">
                         <div class="d-flex flex-row">
-                            <button type="submit" class="btn btn-purple me-2"> <a href="<?= $fullPath."/animelist"."/".$userData['idUser'] ?>">AnimeList</a></button>
+                            <button type="submit" class="btn btn-purple me-2"> <a href="<?= $fullPath."/animelist"."/".$userData['idUser']."/0" ?>">AnimeList</a></button>
                             <?php if(!isset($currentUser) && $userData['follow']){ ?>
                             <button class="btn btn-pink-active me-2" onclick="follow(this, <?=$sessionData->userId?>)" value="<?= $userData['idUser'] ?>">Following</button>
                             <?php } ?>
@@ -116,7 +116,7 @@
                             </div>
                             <div class="d-flex flex-row engagement">
                                 <div class="col-6">
-                                    <p class="title me-5">Enga <span class='bx bxs-hot'></span></p>                                    
+                                    <p class="title me-5">EP <span class='bx bxs-hot'></span></p>                                    
                                 </div>
                                 <div class="col-6">
                                     <p><?= $userData['engagement'] ?></p>                                    
@@ -272,12 +272,12 @@
                             <div class="d-flex flex-row">
                                 <div class="col-2 align-self-center me-5">
                                     <div class="container">
-                                        <img class="img-fluid" src="<?= base_url('assets/img')."/".$anime['img'] ?>" alt="">                                        
+                                        <a href="<?= $fullPath."/anime"."/".$anime['idAnime'] ?>"><img class="img-fluid" src="<?= base_url('assets/img')."/".$anime['img'] ?>" alt="Anime<?= $anime['idAnime'] ?>"></a>                                    
                                     </div>
                                 </div>
                                 <div class="col-10 align-self-center">
                                     <div class="container">
-                                        <p class="anime-title"><?= $anime['nameJap'] ?></p>
+                                        <p class="anime-title"><a href="<?= $fullPath."/anime"."/".$anime['idAnime'] ?>"><?= $anime['nameJap'] ?></a></p>
                                         <div class="d-flex flex-row">
                                             <p class="<?= $color ?> me-4"><?= $txt ?><span class="mx-2"><?= $anime['episodeSeen']." / ".$anime['totalEpisodes'] ?></span> </p>
                                             <p class="score">Score<span class="mx-2"><?= $anime['score'] ?></span></p>

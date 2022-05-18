@@ -13,7 +13,7 @@ class ListModel extends Model {
         "status",
         "episodeSeen",
         "score",
-        "addDate"
+        "updateDate"
     ];
 }
 
