@@ -37,7 +37,7 @@ body {
     background-color: #FFFFFF !important;
     border: 2px solid #F03ADF !important;
 }
-.btn-pink:hover, .btn-pink:focus {
+.btn-pink:hover {
   font-weight: 900 !important;
   color: #FFFFFF !important;
   background-color: #F03ADF !important;
@@ -172,7 +172,7 @@ background-color: #f4f4f460;
   width: 100%;
   filter: brightness(45%);
 }
-.profile-head{
+.profile-head {
   color: #383838;
   font-weight: bold;
   top: -6em;
@@ -191,12 +191,27 @@ background-color: #f4f4f460;
   color: #EB1C24;
 }
 .profile-body .btn-purple {
+  z-index: 1 !important;
   border-radius: 10px !important;
   width: 100%;
 }
 .profile-body .btn-pink {
+  z-index: 1 !important;
   border-radius: 10px !important;
   width: 100%;
+}
+.profile-body .btn-pink:focus {
+  z-index: 1 !important;
+  border-radius: 10px !important;
+  width: 100%;
+}
+.profile-body .btn-pink-active {
+  z-index: 1 !important;
+  border-radius: 10px !important;
+  width: 100%;
+  color: #FFFFFF !important;
+  background-color: #F03ADF !important;
+  font-weight: 900;
 }
 .white-container {
   background-color: #FFFFFF;
@@ -229,10 +244,17 @@ background-color: #f4f4f460;
 }
 .anime-box {
   font-weight: 600;
+  transition: transform 1s, background-color 0.5s;
+  border-radius: 10px;
+}
+.anime-box:hover {
+  transform: scale(1.01) !important;
+  background-color: #F4F4F4;
 }
 .anime-box img{
   border-radius: 10px;
   box-shadow: 0px 0px 5px #3838388e;
+  background-color: #764AF1;
 }
 .anime-box .anime-title {
   color: #764AF1;
@@ -243,6 +265,10 @@ background-color: #f4f4f460;
 }
 .anime-box .score, .score > span {
   color: #3838388e !important;
+}
+.followers {
+  color: #F03ADF !important;
+  font-weight: 900;
 }
 /* ! Custom container */
 .custom-container {

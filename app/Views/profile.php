@@ -7,6 +7,7 @@
     <title>Animelette</title>
     <!-- Custom -->
     <link rel="stylesheet" href="<?= base_url('assets/css/custom-styles.css')?>">
+    <script src="<?= base_url('assets/js/script.js')?>"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
@@ -69,9 +70,16 @@
         <article class="container profile-body">
             <div class="d-flex flex-row">
                 <div class="col-3 d-none d-lg-block">
+                    <!-- User data -->
                     <div class="container">
                         <div class="d-flex flex-row">
-                            <button class="btn btn-purple me-2">AnimeList</button>
+                            <button type="submit" class="btn btn-purple me-2"> <a href="<?= $fullPath."/animelist"."/".$userData['idUser'] ?>">AnimeList</a></button>
+                            <?php if(!isset($currentUser) && $userData['follow']){ ?>
+                            <button class="btn btn-pink-active me-2" onclick="follow(this, <?=$sessionData->userId?>)" value="<?= $userData['idUser'] ?>">Following</button>
+                            <?php } ?>
+                            <?php if(!isset($currentUser) && !$userData['follow']){ ?>
+                            <button class="btn btn-pink me-2" onclick="follow(this, <?=$sessionData->userId?>)" value="<?= $userData['idUser'] ?>">Follow</button>
+                            <?php } ?>
                         </div>
                         <div class="container-fluid white-container my-4 p-4 text-start">
                             <div class="d-flex flex-row">
@@ -108,13 +116,13 @@
                             </div>
                             <div class="d-flex flex-row engagement">
                                 <div class="col-6">
-                                    <p class="title me-5">Eng <span class='bx bxs-hot'></span></p>                                    
+                                    <p class="title me-5">Enga <span class='bx bxs-hot'></span></p>                                    
                                 </div>
                                 <div class="col-6">
                                     <p><?= $userData['engagement'] ?></p>                                    
                                 </div>
                             </div>
-                            <div class="d-flex flex-row">
+                            <div class="d-flex flex-row followers">
                                 <div class="col-6">
                                     <p class="title me-5">Followers</p>                                    
                                 </div>
@@ -123,19 +131,36 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                        <!-- Reviews -->
+                        <div class="container white-container py-4">
+                            <p class="title">Reviews</p>
+                            <p>To do</p>
+                        </div>  
+                    </div>
+            
                 </div>
                 <div class="col-lg-9 col-12 white-container right-container p-4">
+                    <div class="container mb-5 d-lg-none d-xl-none">
+                        <div class="d-flex flex-row">
+                            <button type="submit" class="btn btn-purple me-2"> <a href="<?= $fullPath."/animelist"."/".$userData['idUser'] ?>">AnimeList</a></button>
+                            <?php if(!isset($currentUser) && $userData['follow']){ ?>
+                            <button class="btn btn-pink-active me-2" onclick="follow(this, <?=$sessionData->userId?>)" value="<?= $userData['idUser'] ?>">Following</button>
+                            <?php } ?>
+                            <?php if(!isset($currentUser) && !$userData['follow']){ ?>
+                            <button class="btn btn-pink me-2" onclick="follow(this, <?=$sessionData->userId?>)" value="<?= $userData['idUser'] ?>">Follow</button>
+                            <?php } ?>
+                        </div>
+                    </div>
                     <div class="container text-start">
                         <p class="title">Description</p>
                         <p><?= $userData['bio'] ?></p>
                     </div>    
                     <hr class="my-5">
                     <!-- Graph & statics desktop -->
-                    <div class="container text-start d-none d-md-block">
+                    <div class="container text-start">
                         <p class="title">Anime statics</p>
                         <div class="d-flex flex-row ">
-                            <div class="container col-6 align-self-center text-center">
+                            <div class="container d-none d-md-block col-6 align-self-center text-center">
                                 <div class="d-flex flex-row graph">
                                     <div class="col-6">
                                         <p class="green">Watching</p>
@@ -153,7 +178,26 @@
                                     </div>                                       
                                 </div>
                             </div>
-                            <div class="container col-sm-6 col-12">
+                            <!-- Statics mobile -->
+                            <div class="container-fluid d-md-none d-lg-none d-xl-none col-12 text-start p-0">
+                                <div class="d-flex flex-row graph">
+                                    <div class="col-6">
+                                        <p class="green">Watching</p>
+                                        <p class="blue">Completed</p>
+                                        <p class="yellow">On hold</p>
+                                        <p class="red">Dropped</p>
+                                        <p class="grey">Planning</p>
+                                    </div>     
+                                    <div class="col-6">
+                                        <p><?= $userData['watching'] ?></p>
+                                        <p><?= $userData['completed'] ?></p>
+                                        <p><?= $userData['onhold'] ?></p>
+                                        <p><?= $userData['dropped'] ?></p>
+                                        <p><?= $userData['planning'] ?></p>
+                                    </div>                                       
+                                </div>
+                            </div>
+                            <div class="container d-none d-md-block col-6">
                                 <canvas id="myChart" width="400" height="400"></canvas>
                                 <script>
                                 const ctx = document.getElementById('myChart').getContext('2d');
@@ -193,10 +237,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Graph & statics mobile - <?php // ! TODO ?> -->
+                    <!-- Recent updates desktop -->
                     <hr class="my-5">
-                    <div class="container text-start">
-                        <p class="title">Recent Anime</p>
+                    <div class="container text-start d-none d-sm-block">
+                        <p class="title">Recent Anime Updates</p>
                         <?php
                             foreach ($recentAnime as $key => $anime) {
                                 $txt = '';
@@ -224,7 +268,7 @@
                                         break;
                                 }
                         ?>
-                        <div class="container my-4 anime-box">
+                        <div class="container my-4 anime-box py-4">
                             <div class="d-flex flex-row">
                                 <div class="col-2 align-self-center me-5">
                                     <div class="container">

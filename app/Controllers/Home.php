@@ -46,19 +46,25 @@ class Home extends BaseController
 
     // ? User profile functions
     public function profile ($refUser) {
+      // Check if a session has started, if not return to login view
       if($this->session->get('userId')) {
+        // Check if it's the profile of the current user
         $data["sessionData"] = $this->session;
         if($refUser == $this->session->get('userId')) {
           $idUser = $this->session->get('userId');
+          $data['currentUser'] = true;
         }else {
           $idUser = $refUser;
         }
+
         
+        // Getting data from requested
         $userTable = new UserModel();
         $listTable = new ListModel();
         $followerTable = new FollowerModel();
 
         $data['userData'] = $userTable->find($idUser);
+        $data['userData']['follow'] = $followerTable->where(['refUser' => $idUser, 'refUserFollower' => $this->session->get('userId')])->countAllResults() > 0 ? true : false;
         $data['recentAnime'] =  $listTable->join('anime', 'anime.idAnime = list.refAnime')
                                 ->where('refUser', $idUser)
                                 ->orderBy('addDate', 'DESC')

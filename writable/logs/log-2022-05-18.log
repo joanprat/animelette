@@ -1,0 +1,6 @@
+CRITICAL - 2022-05-18 02:45:41 --> Too few arguments to function App\Controllers\Home::profile(), 0 passed in C:\wamp64\www\animelette\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile()
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

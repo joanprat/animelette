@@ -93,3 +93,69 @@ CRITICAL - 2022-05-17 05:47:11 --> Undefined index: banner
 #7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2022-05-17 10:24:39 --> Undefined index: userId
+#0 C:\wamp64\www\animelette\app\Views\profile.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 74, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(75): view('profile', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('2')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-17 10:56:59 --> Undefined index: banner
+#0 C:\wamp64\www\animelette\app\Views\profile.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 62, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(75): view('profile', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('follow')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-17 11:24:00 --> Undefined index: following
+#0 C:\wamp64\www\animelette\app\Views\profile.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 76, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(82): view('profile', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('1')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-17 11:24:48 --> Undefined index: following
+#0 C:\wamp64\www\animelette\app\Views\profile.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 76, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(82): view('profile', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('1')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-17 11:24:49 --> Undefined index: following
+#0 C:\wamp64\www\animelette\app\Views\profile.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 76, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(82): view('profile', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('1')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-17 11:26:34 --> Undefined index: follow
+#0 C:\wamp64\www\animelette\app\Views\profile.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 76, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(82): view('profile', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('1')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
