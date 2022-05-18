@@ -1,0 +1,79 @@
+CRITICAL - 2022-05-16 05:25:47 --> Trying to get property 'username' of non-object
+#0 C:\wamp64\www\animelette\app\Views\profile.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\wamp64\\www\\a...', 63, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(51): view('profile', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile()
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-16 05:27:38 --> Undefined index: pfp
+#0 C:\wamp64\www\animelette\app\Views\profile.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 62, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(52): view('profile', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile()
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-16 09:44:29 --> Undefined variable: userData
+#0 C:\wamp64\www\animelette\app\Views\profile.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 59, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(55): view('profile')
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile()
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-05-16 11:37:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'lower(status) ='watching'' at line 1
+CRITICAL - 2022-05-16 11:37:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'lower(status) ='watching'' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM l...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM l...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM l...')
+#3 C:\wamp64\www\animelette\app\Controllers\Home.php(52): CodeIgniter\Database\BaseConnection->query('SELECT * FROM l...')
+#4 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile()
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-05-16 11:39:20 --> syntax error, unexpected ';', expecting ')'
+#0 C:\wamp64\www\animelette\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Home/profile')
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Home/profile')
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-16 11:39:20 --> syntax error, unexpected ';', expecting ')'
+#0 C:\wamp64\www\animelette\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Home/profile')
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Home/profile')
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-16 11:39:21 --> syntax error, unexpected ';', expecting ')'
+#0 C:\wamp64\www\animelette\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Home/profile')
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Home/profile')
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-16 11:39:21 --> syntax error, unexpected ';', expecting ')'
+#0 C:\wamp64\www\animelette\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Home/profile')
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Home/profile')
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-16 11:39:21 --> syntax error, unexpected ';', expecting ')'
+#0 C:\wamp64\www\animelette\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Home/profile')
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Home/profile')
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
