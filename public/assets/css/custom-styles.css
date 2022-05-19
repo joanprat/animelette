@@ -208,7 +208,7 @@ background-color: #f4f4f460;
   border-radius: 1000px;
 }
 .engagement {
-  color: #EB1C24 !important;
+  color: #EB1C24;
 }
 .profile-body .btn-purple {
   z-index: 1 !important;
@@ -241,8 +241,56 @@ background-color: #f4f4f460;
   font-weight: 900;
   font-size: 1.2em;
 }
+.right-container {
+  margin-top: 5%;
+}
+.graph {
+  font-weight: 600;
+}
+.green {
+  color: #95CD41;
+}
+.blue {
+  color: #548CFF;
+}
+.yellow {
+  color: #FFCC1D;
+}
+.red {
+  color: #F32424;
+}
+.grey {
+  color: #73777B;
+}
+.anime-box {
+  font-weight: 600;
+  transition: transform 1s, background-color 0.5s;
+  border-radius: 10px;
+}
+.anime-box:hover {
+  transform: scale(1.01) !important;
+  background-color: #F4F4F4;
+}
+.anime-box img{
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #3838388e;
+  background-color: #764AF1;
+}
+.anime-box .anime-title a{
+  color: #764AF1;
+  font-size: 1.2em;
+}
+.anime-box span {
+  color: #383838;
+}
+.anime-box .score, .score > span {
+  color: #3838388e !important;
+}
+.followers {
+  color: #F03ADF !important;
+  font-weight: 900;
+}
 /* Home */
-
 .hero{
   margin: 0;
   display: flex;
@@ -321,6 +369,7 @@ background-color: #f4f4f460;
   pointer-events: none;
   mix-blend-mode: difference;
 }
+
 /* ! Seccion features */
 .features{
   background-color: white;
@@ -553,6 +602,7 @@ tr:hover .red-icon {
   .custom-container-2 {
     max-width: 500px;
   }
+}
 footer{
   height: 40vh;
   background-color: #383838;
