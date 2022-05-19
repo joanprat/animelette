@@ -141,7 +141,6 @@ class Home extends BaseController
           }
 
           $data['userData'] = $userTable->find($idUser);
-
           return view('animelist', $data);
         }else {
           return view('login');

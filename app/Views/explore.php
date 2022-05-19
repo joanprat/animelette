@@ -17,9 +17,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container text-cemter">
             <a class="navbar-brand" href="<?= $fullPath ?>">ANIMELETTE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="navbar-toggler bi bi-list" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="col-6"></div>
                 <div class="col-6 ms-4">
@@ -34,7 +32,7 @@
                             <li class="nav-item">
                                 <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/reviews" ?>">Reviews</a>
                             </li>
-                            <li class="nav-item dropdown align-self-center">
+                            <li class="nav-item dropdown align-self-center d-none d-lg-block">
                                 <?php if(isset($sessionData)){?>
                                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <?= $sessionData->username ?>
@@ -47,6 +45,18 @@
                                 <button class="btn-purple px-4"><a href="<?= $fullPath."/login" ?>">LOG IN</a></button>
                                 <?php } ?>
                             </li>
+                            <?php if(isset($sessionData)){?>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/profile"."/".$sessionData->userId ?>"><?= $sessionData->username ?>'s profile</a>
+                                </li>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/logout" ?>">Logout</a>
+                                </li>  
+                            <?php }else{ ?>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/login" ?>">Login</a>
+                                </li>  
+                            <?php } ?>
                         </ul>                         
                     </div>
                 </div>

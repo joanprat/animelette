@@ -101,8 +101,11 @@ nav a {
 .navbar-nav a:hover {
     border-bottom: 4px solid #764AF1;
 }
-.navbar-toggler-icon {
+.navbar-toggler span{
     color: #FFFFFF !important;
+}
+#nav-icon {
+  color: #FFFFFF !important;
 }
 .nav-background-opacity {
   background-color: #383838dd !important;
@@ -205,7 +208,7 @@ background-color: #f4f4f460;
   border-radius: 1000px;
 }
 .engagement {
-  color: #EB1C24;
+  color: #EB1C24 !important;
 }
 .profile-body .btn-purple {
   z-index: 1 !important;
@@ -245,19 +248,19 @@ background-color: #f4f4f460;
   font-weight: 600;
 }
 .green {
-  color: #95CD41;
+  color: #95CD41 !important;
 }
 .blue {
-  color: #548CFF;
+  color: #548CFF !important;
 }
 .yellow {
-  color: #FFCC1D;
+  color: #FFCC1D !important;
 }
 .red {
-  color: #F32424;
+  color: #F32424 !important;
 }
 .grey {
-  color: #73777B;
+  color: #73777B !important;
 }
 .anime-box {
   font-weight: 600;
@@ -320,14 +323,15 @@ background-color: #f4f4f460;
 }
 .list tr {
   border-radius: 10px !important;
-  -webkit-transition: background-image 0.2s ease-in-out;
-  transition: background-image 4s ease-in-out;
+  transition: all 1s !important;
 }
 .list tr:hover{
   border-radius: 10px;
-  background-color: #F4F4F4;
   background: linear-gradient(#323232c5, #323232c5), url(../pictures/default_banner.png) no-repeat;
   background-size: cover;
+}
+#tr-head {
+  background: none !important;
 }
 .list th {
   color: #3838388e;
@@ -365,6 +369,23 @@ td > a:hover {
 .list .small {
   width: 80%;
 }
+.list select {
+  font-weight: 700;
+  background-color: #ffffff00;
+  border: none;
+}
+.list tr:hover select {
+  color: #FFFFFF !important;
+}
+.list option {
+  color: #FFFFFF;
+  background-color: #383838;
+}
+.list option:hover {
+  color: inherit;
+  background-color: #383838 !important;
+  transform: translateX(0.2em);
+}
 .bi {
   color: #FFFFFF !important;
   cursor: pointer;
@@ -381,6 +402,30 @@ tr:hover .red-icon {
 }
 .list tr:hover .episode-counter {
   color: #FFFFFF !important;
+}
+.list-user img{
+  border: 4px solid #764AF1;
+  border-radius: 100px;
+  width: 100%;
+}
+.list-user {
+  transition: all 0.5s;
+}
+.list-user:hover {
+  box-shadow: 0px 0px 7px #3838388d;
+}
+.list-user p {
+  color: #383838;
+  font-weight: 700;
+  margin: 0px;
+}
+.list-user a {
+  color: #764AF1;
+  text-decoration: none;
+}
+.list-user a:hover {
+  color: #764AF1;
+  text-decoration: underline;
 }
 /* ! Custom container */
 .custom-container {
@@ -414,5 +459,38 @@ tr:hover .red-icon {
 @media (min-width: 1400px) {
   .custom-container {
     max-width: 1200px;
+  }
+}
+.custom-container-2 {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .custom-container-2 {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .custom-container-2 {
+    max-width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .custom-container-2 {
+    max-width: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .custom-container-2 {
+    max-width: 500px;
+  }
+}
+@media (min-width: 1400px) {
+  .custom-container-2 {
+    max-width: 500px;
   }
 }

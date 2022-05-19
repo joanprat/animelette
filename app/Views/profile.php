@@ -10,6 +10,7 @@
     <script src="<?= base_url('assets/js/script.js')?>"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
     <!-- Chart -->
@@ -20,9 +21,7 @@
     <nav class="navbar navbar-expand-lg nav-background-opacity">
         <div class="container text-cemter">
             <a class="navbar-brand" href="<?= $fullPath ?>">ANIMELETTE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="navbar-toggler bi bi-list" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="col-6"></div>
                 <div class="col-6 ms-4">
@@ -37,7 +36,7 @@
                             <li class="nav-item">
                                 <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/reviews" ?>">Reviews</a>
                             </li>
-                            <li class="nav-item dropdown align-self-center">
+                            <li class="nav-item dropdown align-self-center d-none d-lg-block">
                                 <?php if(isset($sessionData)){?>
                                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <?= $sessionData->username ?>
@@ -50,6 +49,18 @@
                                 <button class="btn-purple px-4"><a href="<?= $fullPath."/login" ?>">LOG IN</a></button>
                                 <?php } ?>
                             </li>
+                            <?php if(isset($sessionData)){?>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/profile"."/".$sessionData->userId ?>"><?= $sessionData->username ?>'s profile</a>
+                                </li>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/logout" ?>">Logout</a>
+                                </li>  
+                            <?php }else{ ?>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/login" ?>">Login</a>
+                                </li>  
+                            <?php } ?>
                         </ul>                         
                     </div>
                 </div>
@@ -142,7 +153,7 @@
                 <div class="col-lg-9 col-12 white-container right-container p-4">
                     <div class="container mb-5 d-lg-none d-xl-none">
                         <div class="d-flex flex-row">
-                            <button type="submit" class="btn btn-purple me-2"> <a href="<?= $fullPath."/animelist"."/".$userData['idUser'] ?>">AnimeList</a></button>
+                            <button type="submit" class="btn btn-purple me-2"> <a href="<?= $fullPath."/animelist"."/".$userData['idUser'].'/0' ?>">AnimeList</a></button>
                             <?php if(!isset($currentUser) && $userData['follow']){ ?>
                             <button class="btn btn-pink-active me-2" onclick="follow(this, <?=$sessionData->userId?>)" value="<?= $userData['idUser'] ?>">Following</button>
                             <?php } ?>
