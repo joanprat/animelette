@@ -38,7 +38,7 @@ body {
     background-color: #FFFFFF !important;
     border: 2px solid #F03ADF !important;
 }
-.btn-pink:hover, .btn-pink:focus {
+.btn-pink:hover {
   font-weight: 900 !important;
   color: #FFFFFF !important;
   background-color: #F03ADF !important;
@@ -70,6 +70,7 @@ body {
 nav {
     color: #FFFFFF !important;
     background-color: #383838;
+    z-index: 1;
 }
 nav .navbar-brand {
     font-weight: 900;
@@ -111,7 +112,7 @@ nav a {
     overflow: hidden;
 }
 .carousel-item img {
-    filter: brightness(45%)
+    filter: brightness(45%);
 }
 .login-section input {
     border-radius: 0px;
@@ -264,9 +265,6 @@ background-color: #f4f4f460;
   font-weight: 600;
   color: #764AF1;
 }
-
-
-
 
 /* ! Custom container */
 .custom-container {

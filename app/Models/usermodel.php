@@ -10,10 +10,14 @@ class UserModel extends Model {
     protected $allowedFields = [
         "username",
         "profilePic",
+        "banner",
         "password",
         "location",
         "gender",
-        "birthDate"
+        "birthDate",
+        "joinDate",
+        "engagement",
+        "bio"
     ];
 }
 

@@ -57,7 +57,7 @@
                                         <?= $sessionData->username ?>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a id="profile-option" class="dropdown-item" href="<?= $fullPath."/profile" ?>">Profile</a></li>
+                                        <li><a id="profile-option" class="dropdown-item" href="<?= $fullPath."/profile"."/".$sessionData->userId ?>">Profile</a></li>
                                         <li><a id="profile-option" class="dropdown-item" href="<?= $fullPath."/logout" ?>">Logout</a></li>
                                     </ul>
                                 <?php }else{ ?>

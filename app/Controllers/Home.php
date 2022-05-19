@@ -3,11 +3,13 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\ListModel;
+use App\Models\FollowerModel;
 
 class Home extends BaseController
 {    
     private $db;
-    private $session; 
+    private $session;
     public function __construct(){
       helper('form');
       $this->session=\Config\Services::session();
@@ -43,13 +45,42 @@ class Home extends BaseController
     }
 
     // ? User profile functions
-    public function profile () {
+    public function profile ($refUser) {
+      // Check if a session has started, if not return to login view
       if($this->session->get('userId')) {
+        // Check if it's the profile of the current user
         $data["sessionData"] = $this->session;
+        if($refUser == $this->session->get('userId')) {
+          $idUser = $this->session->get('userId');
+          $data['currentUser'] = true;
+        }else {
+          $idUser = $refUser;
+        }
+
+        
+        // Getting data from requested
+        $userTable = new UserModel();
+        $listTable = new ListModel();
+        $followerTable = new FollowerModel();
+
+        $data['userData'] = $userTable->find($idUser);
+        $data['userData']['follow'] = $followerTable->where(['refUser' => $idUser, 'refUserFollower' => $this->session->get('userId')])->countAllResults() > 0 ? true : false;
+        $data['recentAnime'] =  $listTable->join('anime', 'anime.idAnime = list.refAnime')
+                                ->where('refUser', $idUser)
+                                ->orderBy('addDate', 'DESC')
+                                ->findAll(10);
+        $data['userData']['followers'] = 0;
+        $data['userData']['followers'] = $followerTable->where('refUser', $idUser)->countAllResults();
+        $data['userData']['watching'] = sizeof($listTable->where(['status' => 'watching', 'refUser' => $idUser])->findAll());
+        $data['userData']['completed'] = sizeof($listTable->where(['status' => 'completed', 'refUser' => $idUser])->findAll());
+        $data['userData']['onhold'] = sizeof($listTable->where(['status' => 'on hold', 'refUser' => $idUser])->findAll());
+        $data['userData']['dropped'] = sizeof($listTable->where(['status' => 'dropped', 'refUser' => $idUser])->findAll());
+        $data['userData']['planning'] = sizeof($listTable->where(['status' => 'planning', 'refUser' => $idUser])->findAll());
+        $this->console_log($data);
         return view('profile', $data);
+      }else {
+        return view('login');
       }
-      // ! TODO - Branch userprofile
-      return view('profile');
     }
 
     // ? Login and new account functions
@@ -104,11 +135,15 @@ class Home extends BaseController
         if ($this->validate($rules, $msg) && !empty($dataPost['birth']) && isset($dataPost['gender']) && isset($dataPost['location'])) {
           $newUserData = [
             'username' => $dataPost['username'],
-            'profilePic' => NULL,
+            'profilePic' => "default.png",
+            'banner' => "default_banner.png",
             'password' => sha1($dataPost['passwd1']),
             'location' => $dataPost['location'],
             'gender' => $dataPost['gender'],
-            'birthDate' => $dataPost['birth']
+            'birthDate' => $dataPost['birth'],
+            'joinDate' => $date = date('d-m-y h:i:s'),
+            'engagement' => 0,
+            'bio' => 'Welcome to my profile!'
           ];
           $tableUser = new UserModel();
           $tableUser->insert($newUserData);
