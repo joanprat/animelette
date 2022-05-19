@@ -67,7 +67,7 @@ class Home extends BaseController
         $data['userData']['follow'] = $followerTable->where(['refUser' => $idUser, 'refUserFollower' => $this->session->get('userId')])->countAllResults() > 0 ? true : false;
         $data['recentAnime'] =  $listTable->join('anime', 'anime.idAnime = list.refAnime')
                                 ->where('refUser', $idUser)
-                                ->orderBy('addDate', 'DESC')
+                                ->orderBy('updateDate', 'DESC')
                                 ->findAll(10);
         $data['userData']['followers'] = 0;
         $data['userData']['followers'] = $followerTable->where('refUser', $idUser)->countAllResults();
@@ -81,6 +81,70 @@ class Home extends BaseController
       }else {
         return view('login');
       }
+    }
+
+    // ? Animelist functions 
+    public function animelist($refUser, $status) {
+        // Check if a session has started, if not return to login view
+        if($this->session->get('userId')) {
+          // Check if it's the profile of the current user
+          $status = $status > 6 ? 0 : $status;
+          $data['typeList'] = $status;
+          $data["sessionData"] = $this->session;
+          if($refUser == $this->session->get('userId')) {
+            $idUser = $this->session->get('userId');
+            $data['currentUser'] = true;
+          }else {
+            $idUser = $refUser;
+          }
+
+          $userTable = new UserModel();
+          $listTable = new ListModel();
+          switch ($status) {
+            case 0:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where('refUser', $idUser)
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+            case 1:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where(['refUser' => $idUser, 'status' => 'watching'])
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+            case 2:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where(['refUser' => $idUser, 'status' => 'completed'])
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+            case 3:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where(['refUser' => $idUser, 'status' => 'on hold'])
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+            case 4:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where(['refUser' => $idUser, 'status' => 'dropped'])
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+            case 5:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where(['refUser' => $idUser, 'status' => 'planning'])
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+
+          }
+
+          $data['userData'] = $userTable->find($idUser);
+          return view('animelist', $data);
+        }else {
+          return view('login');
+        }
     }
 
     // ? Login and new account functions
