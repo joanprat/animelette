@@ -208,7 +208,7 @@ background-color: #f4f4f460;
   border-radius: 1000px;
 }
 .engagement {
-  color: #EB1C24;
+  color: #EB1C24 !important;
 }
 .profile-body .btn-purple {
   z-index: 1 !important;
