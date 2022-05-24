@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use App\Models\ListModel;
 use App\Models\FollowerModel;
+use App\Models\ReviewModel;
+use App\Models\LikeModel;
 
 class Home extends BaseController
 {    
@@ -38,10 +40,36 @@ class Home extends BaseController
     public function reviews () {
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
-        return view('reviews', $data);
       }
-      // ! TODO - Branch reviews
-      return view('reviews');
+      $tableReviews = new ReviewModel();
+      $tableLikes  = new LikeModel();
+      $data['reviews'] = $tableReviews ->select("user.idUser, user.username, user.profilePic, user.engagement, anime.idAnime, anime.nameJap, anime.banner, review.content, review.idReview, DATE_FORMAT(review.publicationDate, '%b %d, %Y') as 'date', COUNT(like.refReview) as 'likes'")
+                                      ->join('anime', 'anime.idAnime = review.refAnime')
+                                      ->join('user', 'user.idUser = review.refUser')
+                                      ->join('like', 'like.refReview = review.idReview', 'left')
+                                      ->orderBy('COUNT(like.refReview)', 'DESC')
+                                      ->groupBy('review.idReview')
+                                      ->findAll(10);
+      $data['currentUserLikes'] = $tableLikes -> where('refUser', $this->session->get('userId')) -> findAll();
+      return view('reviews', $data);
+    }
+
+    public function details($idReview) {
+      if($this->session->get('userId')) {
+        $data["sessionData"] = $this->session;
+      }
+      $tableReviews = new ReviewModel();
+      $tableLikes  = new LikeModel();
+      $data['reviewData'] = $tableReviews  ->select("user.idUser, user.username, user.profilePic, user.engagement, anime.idAnime, anime.nameJap, anime.banner, review.content, review.idReview, DATE_FORMAT(review.publicationDate, '%b %d, %Y') as 'date', COUNT(like.refReview) as 'likes'")
+                                        ->join('anime', 'anime.idAnime = review.refAnime')
+                                        ->join('user', 'user.idUser = review.refUser')
+                                        ->join('like', 'like.refReview = review.idReview', 'left')
+                                        ->orderBy('COUNT(like.refReview)', 'DESC')
+                                        ->groupBy('review.idReview')
+                                        ->find($idReview);
+      $data['currentUserLikes'] = $tableLikes -> where('refUser', $this->session->get('userId')) -> findAll();
+      $this->console_log($data);
+      return view('details', $data);
     }
 
     // ? User profile functions
@@ -62,13 +90,26 @@ class Home extends BaseController
         $userTable = new UserModel();
         $listTable = new ListModel();
         $followerTable = new FollowerModel();
+        $reviewTable = new ReviewModel();
 
-        $data['userData'] = $userTable->find($idUser);
+        $data['userData'] = $userTable  ->select("idUser, username, profilePic, banner, location, gender, engagement, bio, DATE_FORMAT(birthDate, '%b %d, %Y') as 'birthDate', DATE_FORMAT(joinDate, '%b %d, %Y') as 'joinDate'")->find($idUser);
         $data['userData']['follow'] = $followerTable->where(['refUser' => $idUser, 'refUserFollower' => $this->session->get('userId')])->countAllResults() > 0 ? true : false;
         $data['recentAnime'] =  $listTable->join('anime', 'anime.idAnime = list.refAnime')
                                 ->where('refUser', $idUser)
                                 ->orderBy('updateDate', 'DESC')
-                                ->findAll(10);
+                                ->findAll(5);
+        $data['topAnime'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+                                      ->where('refUser', $idUser)
+                                      ->orderBy('score', 'DESC')
+                                      ->findAll(5);
+        $data['userData']['reviews'] = $reviewTable ->select("anime.idAnime, anime.nameJap, review.idReview, DATE_FORMAT(review.publicationDate, '%b %d, %Y') as 'date', COUNT(like.refReview) as 'likes'")
+                                        ->join('anime', 'anime.idAnime = review.refAnime')
+                                        ->join('user', 'user.idUser = review.refUser')
+                                        ->join('like', 'like.refReview = review.idReview', 'left')
+                                        ->orderBy('COUNT(like.refReview)', 'DESC')
+                                        ->groupBy('review.idReview')
+                                        ->where('review.refUser', $idUser)
+                                        ->findAll(5);
         $data['userData']['followers'] = 0;
         $data['userData']['followers'] = $followerTable->where('refUser', $idUser)->countAllResults();
         $data['userData']['watching'] = sizeof($listTable->where(['status' => 'watching', 'refUser' => $idUser])->findAll());
