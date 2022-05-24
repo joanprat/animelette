@@ -35,6 +35,15 @@ class Home extends BaseController
       // ! TODO - Branch explore
       return view('explore');
     }
+    // ? Anime functions
+    public function anime ($idAnime) {
+      if($this->session->get('userId')) {
+        $data["sessionData"] = $this->session;
+        return view('explore', $data);
+      }
+      // ! TODO - Branch anime
+      return view('anime');
+    }
 
     // ? Review functions
     public function reviews () {
