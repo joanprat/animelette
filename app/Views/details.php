@@ -16,7 +16,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <?php $fullPath = base_url('Home') ?>
-<body class="reviews-body">
+<body class="login-body">
     <nav class="navbar navbar-expand-lg">
         <div class="container text-cemter">
             <a class="navbar-brand" href="<?= $fullPath ?>">ANIMELETTE</a>
@@ -66,53 +66,33 @@
             </div>
         </div>
     </nav>
-    <section class="container text-center mt-4 reviews">
-        <article class="container py-4">
-            <div class="container text-start">
-                <h2>Hot reviews</h2>
-            </div>
-                <?php foreach ($reviews as $key => $review) { ?>
-                    <div class="review-container my-5 <?php for ($i = 0; $i < sizeof($currentUserLikes); $i++) { if($currentUserLikes[$i]['refReview'] == $review['idReview']) { echo 'active-review'; } } ?>" id="reviewContainer<?= $review['idReview'] ?>">
-                        <div class="d-flex flex-row">
-                            <!-- Userprofile -->
-                            <div class="col-3 align-self-center">
-                                <div class="container review-profile py-4">
-                                    <a href="<?= $fullPath."/profile"."/".$review['idUser'] ?>"><img src="<?= base_url('assets/pictures').'/'.$review['profilePic'] ?>" alt="Review <?= $review['idReview'] ?> profile pic"></a>
-                                    <p class="mt-3 mb-2"><?= $review['username'] ?></p>
-                                    <p class="engagement m-0 p-0 totalEngagement<?= $review["idUser"] ?>"><span class='bx bxs-hot'></span> <?= $review['engagement'] ?></p>
-                                </div>
-                            </div>
-                            <!-- Review -->
-                            <div class="col-9 text-start white-container-2">
-                                <div class="container review-content px-5 py-2">
-                                    <a class="anime-title mt-4 mb-0" href="<?= $fullPath."/anime"."/".$review['idAnime'] ?>"><?= $review['nameJap'] ?></a>
-                                    
-                                    <div class="d-flex flex-row">
-                                        <p class="publication-date"><?= $review['date'] ?></p>
-                                        <p class="ms-2 engagement" id="reviewEngagement<?= $review["idReview"] ?>"><span class='bx bxs-hot'></span><?= $review['likes'] ?></p>  
-                                    </div>
-                                    
-                                    <p class="review-text"><?= substr($review['content'], 0, 400) ?>...</p>
-                                    <a class="more" href="<?= $fullPath."/details"."/".$review['idReview'] ?>">Show more</a>
-                                </div>                            
-                            </div>
+    <section class="contianer-fluid">
+        <article class="container-fluid p-0 details-head-img">
+            <img class="img-fluid" src="<?= base_url('assets/img').'/'.$reviewData['banner'] ?>" alt="">
+        </article>
+        <article class="custom-container text-center white-container review-content p-5 details m-auto">
+            <div class="d-flex flex-row">
+                <div class="col-10">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex flex-row align-items-center">
+                            <a class="anime-title me-2" href="<?= $fullPath.'/anime'.'/'.$reviewData['idAnime'] ?>"><?= $reviewData['nameJap'] ?> review</a>
+                            <p class="m-0 engagement" id="reviewEngagement<?= $reviewData['idReview'] ?>"><span class='bx bxs-hot'></span><?= $reviewData['likes'] ?></p>
                         </div>
-                        <div class="container-fluid col-12 review-footer p-0">
-                            <div class="d-flex flex-row">
-                                <div class="col-3">
-                                    <div class="container-fluid p-0">
-                                        <img class="banner" src="<?= base_url('assets/img').'/'.$review['banner'] ?>" alt="Review <?= $review['idReview'] ?> banner">
-                                    </div>
-                                </div>
-                                <div class="col-9 align-self-center">
-                                    <div class="container">
-                                        <p class="like m-0 <?php for ($i = 0; $i < sizeof($currentUserLikes); $i++) { if($currentUserLikes[$i]['refReview'] == $review['idReview']) { echo 'engagement'; } } ?>" id="reviewContainer<?= $review['idReview'] ?>" onclick="likeReview(this, <?= $review['idReview'] ?>, <?= $review['idUser'] ?>, <?= isset($sessionData->userId) ? $sessionData->userId : null  ?>)"><span class='bx bxs-hot'></span> This is fire!</p>
-                                    </div>
-                                </div>                            
-                            </div>
-                        </div>
+                        <div class="d-flex flex-row align-items-start">
+                            <p class="publication-date me-1"><?= ' '.$reviewData['date'] ?></p>                
+                            <a href="<?= $fullPath."/profile".'/'.$reviewData['idUser'] ?>" class="user-info">by <?= $reviewData['username'] ?></a>
+                            <p class="visually-hidden" id="total-engagement"><?= $reviewData['engagement'] ?></p>
+                        </div>                    
                     </div>
-                <?php } ?>
+                </div>
+                <div class="col-2">
+                    <div class="d-flex flex-column align-items-center">
+                        <button id="btn-fire-1" class="fire p-2 <?php $flag = false; for ($i = 0; $i < sizeof($currentUserLikes); $i++) { if($currentUserLikes[$i]['refReview'] == $reviewData['idReview']) { $flag = true; }  } echo $res = $flag ? 'fire-button-enabled' : 'fire-button-disabled '; ?>" onclick="likeReviewDetails(this, <?= $reviewData['idReview'] ?>, <?= $reviewData['idUser'] ?>, <?= isset($sessionData->userId) ? $sessionData->userId : null  ?>)"><span class='bx bxs-hot'></span></button>
+                    </div>                    
+                </div>
+            </div>
+            <p class="review-text text-start my-4"><?= $reviewData['content'] ?></p>
+            <button id="btn-fire-2" class="p-2 mt-4 btn-long <?php $flag = false; for ($i = 0; $i < sizeof($currentUserLikes); $i++) { if($currentUserLikes[$i]['refReview'] == $reviewData['idReview']) { $flag = true; }  } echo $res = $flag ? 'fire-button-enabled' : 'fire-button-disabled '; ?>" onclick="likeReviewDetails(this, <?= $reviewData['idReview'] ?>, <?= $reviewData['idUser'] ?>, <?= isset($sessionData->userId) ? $sessionData->userId : null  ?>)"><span class='bx bxs-hot'></span>This is fire</button>
         </article>
     </section>
 </body>

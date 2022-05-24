@@ -536,6 +536,208 @@ tr:hover .red-icon {
   text-decoration: underline;
 }
 
+/* ? Reviews */
+.black-container-2 {
+  background-color: #383838;
+}
+.white-container-2 {
+  background-color: #F4F4F4;
+}
+.reviews {
+  color: #383838 !important;
+}
+.reviews h2 {
+  color: #764AF1;
+  font-weight: 700;
+}
+.review-container {
+  border-radius: 10px; 
+  overflow: hidden; 
+  background-color: #383838;
+  transition: 0.5s;
+}
+.review-container:hover {
+  box-shadow: 0px 0px 0px 4px #EB1C24;
+}
+.liked {
+  box-shadow: 0px 0px 0px 4px #EB1C24;
+}
+/* Profile */
+.review-profile {
+  color: #FFFFFF;
+  font-weight: 700;
+  background-color: #383838;
+}
+.review-profile img {
+  filter: grayscale(1);
+  border-radius: 100px;
+  width: 60%;
+  transition: 0.5s;
+}
+.active-review img{
+  filter: grayscale(0) !important;
+}
+/* Content */
+.review-content-container {
+  background-color: #F4F4F4;
+}
+.review-content {
+  color: #383838;
+}
+.review-content .anime-title{
+  color: #764AF1;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.review-content .anime-title:hover{
+  text-decoration: underline;
+}
+.review-text {
+  white-space: pre-line;
+  font-weight: 500;
+}
+.publication-date {
+  color: #38383875;
+  font-size: 0.8em;
+  font-weight: 700 !important;
+}
+.review-content div>.engagement {
+  font-size: 0.8em;
+  font-weight: 700 !important;
+}
+.more{
+  color: #EB1C24;
+  font-weight: 700;
+  text-decoration: none;
+}
+.more:hover{
+  color: #EB1C24;
+  text-decoration: underline;
+}
+
+/* Footer */
+.review-footer img{
+  width: 100%;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+.review-container:hover img {
+  filter: grayscale(0);
+}
+.review-footer .like {
+  font-size: 1.2em;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.5s;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+.review-footer .like:hover {
+  color: #EB1C24;
+}
+/* Details */
+.user-info {
+  color: #764AF1;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 700 !important;
+}
+.user-info:hover {
+  color: #EB1C24;
+}
+.details {
+  top: -4em;
+  position: relative;
+}
+.details-head-img {
+  filter: brightness(75%);
+}
+.btn-long {
+  width: 100%;
+}
+.fire-button-disabled {
+  color: #F32424;
+  font-weight: 700;
+  border: 3px solid #F32424;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.fire-button-enabled {
+  color: #FFFFFF !important;
+  font-weight: 700;
+  border: 3px solid #F32424 !important;
+  background-color: #F32424 !important;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.fire {
+  font-size: 2em
+}
+.fire-button-disabled:hover {
+  color: #FFFFFF;
+  font-weight: 700;
+  border: 3px solid #F32424;
+  background-color: #F32424;
+  border-radius: 5px;
+}
+#btn-fire-1 {
+  color: #F32424;
+  font-weight: 700;
+  border: 3px solid #F32424;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+#btn-fire-2 {
+  color: #F32424;
+  font-weight: 700;
+  border: 3px solid #F32424;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+#btn-fire-1:hover {
+  color: #FFFFFF;
+  font-weight: 700;
+  border: 3px solid #F32424;
+  background-color: #F32424;
+  border-radius: 5px;
+}
+#btn-fire-2:hover {
+  color: #FFFFFF;
+  font-weight: 700;
+  width: 100%;
+  border: 3px solid #F32424;
+  background-color: #F32424;
+  border-radius: 5px;
+}
+.review-title-profile {
+  color: #764AF1;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+.review-title-profile:hover {
+  color: #F03ADF;
+}
+.review-container-profile {
+  transition: all 0.5s;
+}
+.review-container-profile:hover {
+  background-color: #F4F4F4;
+  border-radius: 10px;
+}
+/* Profile top anime */
+.top-anime-container img {
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #3838388e;
+}
+.top-anime-container .score {
+  color: #38383875;
+  font-weight: 700;
+}
 /* ! Custom container */
 .custom-container {
   width: 100%;

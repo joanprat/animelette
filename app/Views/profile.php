@@ -142,10 +142,41 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Top anime -->
+                        <div class="container white-container mb-4 py-4 text-start">
+                            <p class="title text-center">Favourite anime</p>
+                            <?php foreach ($topAnime as $key => $anime) { ?>
+                            <div class="container my-3 top-anime-container">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div class="col-6">
+                                        <div class="container">
+                                            <img class="img-fluid" src="<?= base_url('assets/img')."/".$anime['img'] ?>" alt="Top anime <?= $key ?>">
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex flex-column">
+                                            <a href="<?= $fullPath."/anime"."/".$anime['idAnime'] ?>" class="m-0 review-title-profile"><?= $anime['nameJap'] ?></a>
+                                            <p class="m-0 score">Score <?= $anime['score'] ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div>  
                         <!-- Reviews -->
-                        <div class="container white-container py-4">
-                            <p class="title">Reviews</p>
-                            <p>To do</p>
+                        <div class="container white-container py-4 text-start">
+                            <p class="title text-center">Reviews</p>
+                            <?php foreach ($userData['reviews'] as $key => $review) { ?>
+                                <div class="container my-4 review-container-profile p-3">
+                                    <a class="review-title-profile my-0" href="<?= $fullPath."/anime"."/".$review['idAnime'] ?>"><?= $review['nameJap'] ?></a>
+                                    <div class="d-flex flex-row align-items-center">
+                                        <p class="publication-date me-2 my-0"><?= $review['date'] ?></p>
+                                        <p class="engagement my-0"><?= $review['likes'] ?></p>
+                                        <span class='bx bxs-hot engagement'></span>
+                                    </div>
+                                    <a class="more" href="<?= $fullPath."/details"."/".$review['idReview'] ?>">See more</a>
+                                </div>
+                            <?php } ?>
                         </div>  
                     </div>
             
@@ -301,7 +332,23 @@
                             }
                         ?>
                     </div>
-                    </div>                 
+                    <!-- Review mobile -->
+                    <hr class="my-5 d-none d-sm-block d-md-block d-lg-none">
+                    <div class="container white-container py-4 my-4 text-start d-block d-lg-none">
+                        <p class="title">Reviews</p>
+                        <?php foreach ($userData['reviews'] as $key => $review) { ?>
+                            <div class="container my-4 review-container-profile p-3">
+                                <a class="review-title-profile my-0" href="<?= $fullPath."/anime"."/".$review['idAnime'] ?>"><?= $review['nameJap'] ?></a>
+                                <div class="d-flex flex-row align-items-center">
+                                    <p class="publication-date me-2 my-0"><?= $review['date'] ?></p>
+                                    <p class="engagement my-0"><?= $review['likes'] ?></p>
+                                    <span class='bx bxs-hot engagement'></span>
+                                </div>
+                                <a class="more" href="<?= $fullPath."/details"."/".$review['idReview'] ?>">See more</a>
+                            </div>
+                        <?php } ?>
+                    </div>  
+                </div>                 
                 </div>
             </div>
         </article>

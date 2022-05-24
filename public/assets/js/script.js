@@ -65,7 +65,6 @@ function updateStatus(idAnime, idUser, newStatus) {
     var req = new XMLHttpRequest();
     req.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
             if (this.response == 1) {
                 console.log('Status updated successfully - AJAX Req');
             }
@@ -77,4 +76,87 @@ function updateStatus(idAnime, idUser, newStatus) {
     req.open('POST', '../../../assets/ajax/updateStatus.php', true);
     req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     req.send('refAnime=' + idAnime + "&refUser=" + idUser + "&statusUpdate=" + newStatus);
+}
+// ? Review functions
+/**
+ *
+ * @param item Like button
+ * @param idReview Id of the review
+ * @param idUser Id of the user who wrote this review
+ * @param currentUser Current user id
+ */
+function likeReview(item, idReview, idUser, currentUser) {
+    if (currentUser != null) {
+        var total = document.getElementsByClassName('totalEngagement' + idUser);
+        var newTotal = parseInt(total[0].textContent);
+        var req = new XMLHttpRequest();
+        req.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this.responseText);
+                var reviewEng = document.getElementById('reviewEngagement' + idReview);
+                var reviewContainer = document.getElementById('reviewContainer' + idReview);
+                var newReviewEng = parseInt(reviewEng.textContent);
+                if (this.responseText == 'Like') {
+                    item.className = 'like m-0 engagement';
+                    reviewContainer.className = 'review-container my-5 active-review';
+                    ++newTotal;
+                    for (let i = 0; i < total.length; i++) {
+                        total[i].innerHTML = "<span class='bx bxs-hot'></span>" + newTotal;
+                    }
+                    reviewEng.innerHTML = "<span class='bx bxs-hot'></span>" + ++newReviewEng;
+                }
+                else {
+                    item.className = 'like m-0';
+                    reviewContainer.className = 'review-container my-5';
+                    --newTotal;
+                    for (let i = 0; i < total.length; i++) {
+                        total[i].innerHTML = "<span class='bx bxs-hot'></span>" + newTotal;
+                    }
+                    reviewEng.innerHTML = "<span class='bx bxs-hot'></span>" + --newReviewEng;
+                }
+            }
+        };
+        req.open('POST', '../assets/ajax/likeReview.php', true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.send('refUser=' + currentUser + "&refReview=" + idReview + "&engagement=" + newTotal + "&userWritter=" + idUser);
+        item.className = item.className == 'like m-0' ? 'like m-0 engagement' : 'like m-0';
+    }
+    else {
+        alert('You must be logged in to to rate user reviews');
+    }
+}
+function likeReviewDetails(item, idReview, idUser, currentUser) {
+    if (currentUser != null) {
+        var tmp = document.getElementById('total-engagement');
+        var totalEngagement = parseInt(tmp.textContent);
+        var req = new XMLHttpRequest();
+        req.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this.responseText);
+                var reviewEng = document.getElementById('reviewEngagement' + idReview);
+                var btn1 = document.getElementById('btn-fire-1');
+                var btn2 = document.getElementById('btn-fire-2');
+                var newReviewEng = parseInt(reviewEng.textContent);
+                if (this.responseText == 'Like') {
+                    btn1.className = 'fire p-2 fire-button-disabled fire-button-enabled';
+                    btn2.className = 'p-2 mt-4 btn-long fire-button-disabled fire-button-enabled';
+                    tmp.innerText = '' + ++totalEngagement;
+                    reviewEng.innerHTML = "<span class='bx bxs-hot'></span>" + ++newReviewEng;
+                }
+                else {
+                    btn1.className = 'fire p-2 fire-button-disabled';
+                    btn2.className = 'p-2 mt-4 btn-long fire-button-disabled';
+                    tmp.innerText = '' + --totalEngagement;
+                    reviewEng.innerHTML = "<span class='bx bxs-hot'></span>" + --newReviewEng;
+                }
+            }
+        };
+        req.open('POST', '../../assets/ajax/likeReview.php', true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.send('refUser=' + currentUser + "&refReview=" + idReview + "&engagement=" + totalEngagement + "&userWritter=" + idUser);
+        item.className = item.className == 'like m-0' ? 'like m-0 engagement' : 'like m-0';
+    }
+    else {
+        alert('You must be logged in to to rate user reviews');
+    }
 }
