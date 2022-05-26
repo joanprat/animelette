@@ -6,7 +6,8 @@ use App\Models\UserModel;
 use App\Models\ListModel;
 use App\Models\FollowerModel;
 use App\Models\AnimeModel;
-
+use App\Models\ReviewModel;
+use App\Models\LikeModel;
 
 class Home extends BaseController
 {    
@@ -47,15 +48,50 @@ class Home extends BaseController
       // ! TODO - Branch explore
       return view('explore');
     }
+    // ? Anime functions
+    public function anime ($idAnime) {
+      if($this->session->get('userId')) {
+        $data["sessionData"] = $this->session;
+        return view('explore', $data);
+      }
+      // ! TODO - Branch anime
+      return view('anime');
+    }
 
     // ? Review functions
     public function reviews () {
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
-        return view('reviews', $data);
       }
-      // ! TODO - Branch reviews
-      return view('reviews');
+      $tableReviews = new ReviewModel();
+      $tableLikes  = new LikeModel();
+      $data['reviews'] = $tableReviews ->select("user.idUser, user.username, user.profilePic, user.engagement, anime.idAnime, anime.nameJap, anime.banner, review.content, review.idReview, DATE_FORMAT(review.publicationDate, '%b %d, %Y') as 'date', COUNT(like.refReview) as 'likes'")
+                                      ->join('anime', 'anime.idAnime = review.refAnime')
+                                      ->join('user', 'user.idUser = review.refUser')
+                                      ->join('like', 'like.refReview = review.idReview', 'left')
+                                      ->orderBy('COUNT(like.refReview)', 'DESC')
+                                      ->groupBy('review.idReview')
+                                      ->findAll(10);
+      $data['currentUserLikes'] = $tableLikes -> where('refUser', $this->session->get('userId')) -> findAll();
+      return view('reviews', $data);
+    }
+
+    public function details($idReview) {
+      if($this->session->get('userId')) {
+        $data["sessionData"] = $this->session;
+      }
+      $tableReviews = new ReviewModel();
+      $tableLikes  = new LikeModel();
+      $data['reviewData'] = $tableReviews  ->select("user.idUser, user.username, user.profilePic, user.engagement, anime.idAnime, anime.nameJap, anime.banner, review.content, review.idReview, DATE_FORMAT(review.publicationDate, '%b %d, %Y') as 'date', COUNT(like.refReview) as 'likes'")
+                                        ->join('anime', 'anime.idAnime = review.refAnime')
+                                        ->join('user', 'user.idUser = review.refUser')
+                                        ->join('like', 'like.refReview = review.idReview', 'left')
+                                        ->orderBy('COUNT(like.refReview)', 'DESC')
+                                        ->groupBy('review.idReview')
+                                        ->find($idReview);
+      $data['currentUserLikes'] = $tableLikes -> where('refUser', $this->session->get('userId')) -> findAll();
+      $this->console_log($data);
+      return view('details', $data);
     }
 
     // ? User profile functions
@@ -76,13 +112,26 @@ class Home extends BaseController
         $userTable = new UserModel();
         $listTable = new ListModel();
         $followerTable = new FollowerModel();
+        $reviewTable = new ReviewModel();
 
-        $data['userData'] = $userTable->find($idUser);
+        $data['userData'] = $userTable  ->select("idUser, username, profilePic, banner, location, gender, engagement, bio, DATE_FORMAT(birthDate, '%b %d, %Y') as 'birthDate', DATE_FORMAT(joinDate, '%b %d, %Y') as 'joinDate'")->find($idUser);
         $data['userData']['follow'] = $followerTable->where(['refUser' => $idUser, 'refUserFollower' => $this->session->get('userId')])->countAllResults() > 0 ? true : false;
         $data['recentAnime'] =  $listTable->join('anime', 'anime.idAnime = list.refAnime')
                                 ->where('refUser', $idUser)
-                                ->orderBy('addDate', 'DESC')
-                                ->findAll(10);
+                                ->orderBy('updateDate', 'DESC')
+                                ->findAll(5);
+        $data['topAnime'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+                                      ->where('refUser', $idUser)
+                                      ->orderBy('score', 'DESC')
+                                      ->findAll(5);
+        $data['userData']['reviews'] = $reviewTable ->select("anime.idAnime, anime.nameJap, review.idReview, DATE_FORMAT(review.publicationDate, '%b %d, %Y') as 'date', COUNT(like.refReview) as 'likes'")
+                                        ->join('anime', 'anime.idAnime = review.refAnime')
+                                        ->join('user', 'user.idUser = review.refUser')
+                                        ->join('like', 'like.refReview = review.idReview', 'left')
+                                        ->orderBy('COUNT(like.refReview)', 'DESC')
+                                        ->groupBy('review.idReview')
+                                        ->where('review.refUser', $idUser)
+                                        ->findAll(5);
         $data['userData']['followers'] = 0;
         $data['userData']['followers'] = $followerTable->where('refUser', $idUser)->countAllResults();
         $data['userData']['watching'] = sizeof($listTable->where(['status' => 'watching', 'refUser' => $idUser])->findAll());
@@ -95,6 +144,70 @@ class Home extends BaseController
       }else {
         return view('login');
       }
+    }
+
+    // ? Animelist functions 
+    public function animelist($refUser, $status) {
+        // Check if a session has started, if not return to login view
+        if($this->session->get('userId')) {
+          // Check if it's the profile of the current user
+          $status = $status > 6 ? 0 : $status;
+          $data['typeList'] = $status;
+          $data["sessionData"] = $this->session;
+          if($refUser == $this->session->get('userId')) {
+            $idUser = $this->session->get('userId');
+            $data['currentUser'] = true;
+          }else {
+            $idUser = $refUser;
+          }
+
+          $userTable = new UserModel();
+          $listTable = new ListModel();
+          switch ($status) {
+            case 0:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where('refUser', $idUser)
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+            case 1:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where(['refUser' => $idUser, 'status' => 'watching'])
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+            case 2:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where(['refUser' => $idUser, 'status' => 'completed'])
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+            case 3:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where(['refUser' => $idUser, 'status' => 'on hold'])
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+            case 4:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where(['refUser' => $idUser, 'status' => 'dropped'])
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+            case 5:
+              $data['animelist'] = $listTable->join('anime', 'anime.idAnime = list.refAnime')
+              ->where(['refUser' => $idUser, 'status' => 'planning'])
+              ->orderBy('updateDate', 'DESC')
+              ->findAll();
+              break;
+
+          }
+
+          $data['userData'] = $userTable->find($idUser);
+          return view('animelist', $data);
+        }else {
+          return view('login');
+        }
     }
 
     // ? Login and new account functions

@@ -7,19 +7,20 @@
     <title>Animelette</title>
     <!-- Custom -->
     <link rel="stylesheet" href="<?= base_url('assets/css/custom-styles.css')?>">
+    <script src="<?= base_url('assets/js/script.js')?>"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
+    <!-- Box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <?php $fullPath = base_url('Home') ?>
-<body class="login-body">
+<body class="reviews-body">
     <nav class="navbar navbar-expand-lg">
         <div class="container text-cemter">
             <a class="navbar-brand" href="<?= $fullPath ?>">ANIMELETTE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="navbar-toggler bi bi-list" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="col-6"></div>
                 <div class="col-6 ms-4">
@@ -34,7 +35,7 @@
                             <li class="nav-item">
                                 <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/reviews" ?>">Reviews</a>
                             </li>
-                            <li class="nav-item dropdown align-self-center">
+                            <li class="nav-item dropdown align-self-center d-none d-lg-block">
                                 <?php if(isset($sessionData)){?>
                                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <?= $sessionData->username ?>
@@ -47,15 +48,72 @@
                                 <button class="btn-purple px-4"><a href="<?= $fullPath."/login" ?>">LOG IN</a></button>
                                 <?php } ?>
                             </li>
+                            <?php if(isset($sessionData)){?>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/profile"."/".$sessionData->userId ?>"><?= $sessionData->username ?>'s profile</a>
+                                </li>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/logout" ?>">Logout</a>
+                                </li>  
+                            <?php }else{ ?>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/login" ?>">Login</a>
+                                </li>  
+                            <?php } ?>
                         </ul>                         
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    <section class="container text-center mt-4">
-        <!-- // ! TODO - Branch reviews -->
-        <p style="color: #F03ADF; font-size: 4em; font-weight: 900;">&#60 Reviews building in progress &#62</p>
+    <section class="container text-center mt-4 reviews">
+        <article class="container py-4">
+            <div class="container text-start">
+                <h2>Hot reviews</h2>
+            </div>
+                <?php foreach ($reviews as $key => $review) { ?>
+                    <div class="review-container my-5 <?php for ($i = 0; $i < sizeof($currentUserLikes); $i++) { if($currentUserLikes[$i]['refReview'] == $review['idReview']) { echo 'active-review'; } } ?>" id="reviewContainer<?= $review['idReview'] ?>">
+                        <div class="d-flex flex-row">
+                            <!-- Userprofile -->
+                            <div class="col-3 align-self-center">
+                                <div class="container review-profile py-4">
+                                    <a href="<?= $fullPath."/profile"."/".$review['idUser'] ?>"><img src="<?= base_url('assets/pictures').'/'.$review['profilePic'] ?>" alt="Review <?= $review['idReview'] ?> profile pic"></a>
+                                    <p class="mt-3 mb-2"><?= $review['username'] ?></p>
+                                    <p class="engagement m-0 p-0 totalEngagement<?= $review["idUser"] ?>"><span class='bx bxs-hot'></span> <?= $review['engagement'] ?></p>
+                                </div>
+                            </div>
+                            <!-- Review -->
+                            <div class="col-9 text-start white-container-2">
+                                <div class="container review-content px-5 py-2">
+                                    <a class="anime-title mt-4 mb-0" href="<?= $fullPath."/anime"."/".$review['idAnime'] ?>"><?= $review['nameJap'] ?></a>
+                                    
+                                    <div class="d-flex flex-row">
+                                        <p class="publication-date"><?= $review['date'] ?></p>
+                                        <p class="ms-2 engagement" id="reviewEngagement<?= $review["idReview"] ?>"><span class='bx bxs-hot'></span><?= $review['likes'] ?></p>  
+                                    </div>
+                                    
+                                    <p class="review-text"><?= substr($review['content'], 0, 400) ?>...</p>
+                                    <a class="more" href="<?= $fullPath."/details"."/".$review['idReview'] ?>">Show more</a>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="container-fluid col-12 review-footer p-0">
+                            <div class="d-flex flex-row">
+                                <div class="col-3">
+                                    <div class="container-fluid p-0">
+                                        <img class="banner" src="<?= base_url('assets/img').'/'.$review['banner'] ?>" alt="Review <?= $review['idReview'] ?> banner">
+                                    </div>
+                                </div>
+                                <div class="col-9 align-self-center">
+                                    <div class="container">
+                                        <p class="like m-0 <?php for ($i = 0; $i < sizeof($currentUserLikes); $i++) { if($currentUserLikes[$i]['refReview'] == $review['idReview']) { echo 'engagement'; } } ?>" id="reviewContainer<?= $review['idReview'] ?>" onclick="likeReview(this, <?= $review['idReview'] ?>, <?= $review['idUser'] ?>, <?= isset($sessionData->userId) ? $sessionData->userId : null  ?>)"><span class='bx bxs-hot'></span> This is fire!</p>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+        </article>
     </section>
 </body>
 </html>

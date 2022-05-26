@@ -10,6 +10,7 @@
     <script src="<?= base_url('assets/js/script.js')?>"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
     <!-- Chart -->
@@ -20,9 +21,7 @@
     <nav class="navbar navbar-expand-lg nav-background-opacity">
         <div class="container text-cemter">
             <a class="navbar-brand" href="<?= $fullPath ?>">ANIMELETTE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="navbar-toggler bi bi-list" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="col-6"></div>
                 <div class="col-6 ms-4">
@@ -37,7 +36,7 @@
                             <li class="nav-item">
                                 <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/reviews" ?>">Reviews</a>
                             </li>
-                            <li class="nav-item dropdown align-self-center">
+                            <li class="nav-item dropdown align-self-center d-none d-lg-block">
                                 <?php if(isset($sessionData)){?>
                                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <?= $sessionData->username ?>
@@ -50,6 +49,18 @@
                                 <button class="btn-purple px-4"><a href="<?= $fullPath."/login" ?>">LOG IN</a></button>
                                 <?php } ?>
                             </li>
+                            <?php if(isset($sessionData)){?>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/profile"."/".$sessionData->userId ?>"><?= $sessionData->username ?>'s profile</a>
+                                </li>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/logout" ?>">Logout</a>
+                                </li>  
+                            <?php }else{ ?>
+                                <li class="nav-item d-lg-none d-xl-none">
+                                    <a class="nav-link me-4" aria-current="page" href="<?= $fullPath."/login" ?>">Login</a>
+                                </li>  
+                            <?php } ?>
                         </ul>                         
                     </div>
                 </div>
@@ -73,7 +84,7 @@
                     <!-- User data -->
                     <div class="container">
                         <div class="d-flex flex-row">
-                            <button type="submit" class="btn btn-purple me-2"> <a href="<?= $fullPath."/animelist"."/".$userData['idUser'] ?>">AnimeList</a></button>
+                            <button type="submit" class="btn btn-purple me-2"> <a href="<?= $fullPath."/animelist"."/".$userData['idUser']."/0" ?>">AnimeList</a></button>
                             <?php if(!isset($currentUser) && $userData['follow']){ ?>
                             <button class="btn btn-pink-active me-2" onclick="follow(this, <?=$sessionData->userId?>)" value="<?= $userData['idUser'] ?>">Following</button>
                             <?php } ?>
@@ -116,7 +127,7 @@
                             </div>
                             <div class="d-flex flex-row engagement">
                                 <div class="col-6">
-                                    <p class="title me-5">Enga <span class='bx bxs-hot'></span></p>                                    
+                                    <p class="title me-5">EP <span class='bx bxs-hot'></span></p>                                    
                                 </div>
                                 <div class="col-6">
                                     <p><?= $userData['engagement'] ?></p>                                    
@@ -131,10 +142,41 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Top anime -->
+                        <div class="container white-container mb-4 py-4 text-start">
+                            <p class="title text-center">Favourite anime</p>
+                            <?php foreach ($topAnime as $key => $anime) { ?>
+                            <div class="container my-3 top-anime-container">
+                                <div class="d-flex flex-row align-items-center">
+                                    <div class="col-6">
+                                        <div class="container">
+                                            <img class="img-fluid" src="<?= base_url('assets/img')."/".$anime['img'] ?>" alt="Top anime <?= $key ?>">
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex flex-column">
+                                            <a href="<?= $fullPath."/anime"."/".$anime['idAnime'] ?>" class="m-0 review-title-profile"><?= $anime['nameJap'] ?></a>
+                                            <p class="m-0 score">Score <?= $anime['score'] ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div>  
                         <!-- Reviews -->
-                        <div class="container white-container py-4">
-                            <p class="title">Reviews</p>
-                            <p>To do</p>
+                        <div class="container white-container py-4 text-start">
+                            <p class="title text-center">Reviews</p>
+                            <?php foreach ($userData['reviews'] as $key => $review) { ?>
+                                <div class="container my-4 review-container-profile p-3">
+                                    <a class="review-title-profile my-0" href="<?= $fullPath."/anime"."/".$review['idAnime'] ?>"><?= $review['nameJap'] ?></a>
+                                    <div class="d-flex flex-row align-items-center">
+                                        <p class="publication-date me-2 my-0"><?= $review['date'] ?></p>
+                                        <p class="engagement my-0"><?= $review['likes'] ?></p>
+                                        <span class='bx bxs-hot engagement'></span>
+                                    </div>
+                                    <a class="more" href="<?= $fullPath."/details"."/".$review['idReview'] ?>">See more</a>
+                                </div>
+                            <?php } ?>
                         </div>  
                     </div>
             
@@ -142,7 +184,7 @@
                 <div class="col-lg-9 col-12 white-container right-container p-4">
                     <div class="container mb-5 d-lg-none d-xl-none">
                         <div class="d-flex flex-row">
-                            <button type="submit" class="btn btn-purple me-2"> <a href="<?= $fullPath."/animelist"."/".$userData['idUser'] ?>">AnimeList</a></button>
+                            <button type="submit" class="btn btn-purple me-2"> <a href="<?= $fullPath."/animelist"."/".$userData['idUser'].'/0' ?>">AnimeList</a></button>
                             <?php if(!isset($currentUser) && $userData['follow']){ ?>
                             <button class="btn btn-pink-active me-2" onclick="follow(this, <?=$sessionData->userId?>)" value="<?= $userData['idUser'] ?>">Following</button>
                             <?php } ?>
@@ -272,12 +314,12 @@
                             <div class="d-flex flex-row">
                                 <div class="col-2 align-self-center me-5">
                                     <div class="container">
-                                        <img class="img-fluid" src="<?= base_url('assets/img')."/".$anime['img'] ?>" alt="">                                        
+                                        <a href="<?= $fullPath."/anime"."/".$anime['idAnime'] ?>"><img class="img-fluid" src="<?= base_url('assets/img')."/".$anime['img'] ?>" alt="Anime<?= $anime['idAnime'] ?>"></a>                                    
                                     </div>
                                 </div>
                                 <div class="col-10 align-self-center">
                                     <div class="container">
-                                        <p class="anime-title"><?= $anime['nameJap'] ?></p>
+                                        <p class="anime-title"><a href="<?= $fullPath."/anime"."/".$anime['idAnime'] ?>"><?= $anime['nameJap'] ?></a></p>
                                         <div class="d-flex flex-row">
                                             <p class="<?= $color ?> me-4"><?= $txt ?><span class="mx-2"><?= $anime['episodeSeen']." / ".$anime['totalEpisodes'] ?></span> </p>
                                             <p class="score">Score<span class="mx-2"><?= $anime['score'] ?></span></p>
@@ -290,7 +332,23 @@
                             }
                         ?>
                     </div>
-                    </div>                 
+                    <!-- Review mobile -->
+                    <hr class="my-5 d-none d-sm-block d-md-block d-lg-none">
+                    <div class="container white-container py-4 my-4 text-start d-block d-lg-none">
+                        <p class="title">Reviews</p>
+                        <?php foreach ($userData['reviews'] as $key => $review) { ?>
+                            <div class="container my-4 review-container-profile p-3">
+                                <a class="review-title-profile my-0" href="<?= $fullPath."/anime"."/".$review['idAnime'] ?>"><?= $review['nameJap'] ?></a>
+                                <div class="d-flex flex-row align-items-center">
+                                    <p class="publication-date me-2 my-0"><?= $review['date'] ?></p>
+                                    <p class="engagement my-0"><?= $review['likes'] ?></p>
+                                    <span class='bx bxs-hot engagement'></span>
+                                </div>
+                                <a class="more" href="<?= $fullPath."/details"."/".$review['idReview'] ?>">See more</a>
+                            </div>
+                        <?php } ?>
+                    </div>  
+                </div>                 
                 </div>
             </div>
         </article>
