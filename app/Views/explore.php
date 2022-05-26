@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/custom-styles.css')?>">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
+    <script src="<?= base_url('assets/js/script.js')?>"></script>
 </head>
 <?php $fullPath = base_url('Home') ?>
 <body class="login-body">
@@ -63,9 +66,32 @@
             </div>
         </div>
     </nav>
-    <section class="container text-center mt-4">
+    <section class="container text-center mt-4 explore">
         <!-- // ! TODO - Branch explore -->
-        <p style="color: #F03ADF; font-size: 4em; font-weight: 900;">&#60 Explore building in progress &#62</p>
+    
+    <div class="container" id="explorerDiv">
+        <input type="hidden" value="<?= $minYear?>" id="minYear">
+        <input type="hidden" value="<?= $maxYear?>" id="maxYear">
+
+        <select onchange="swapExplorer()" id="selectUserOrAnime">
+            <option default>Select an option</option>
+            <option>Anime</option>
+            <option>User</option>
+        </select><br> 
+    </div>
+        
+        <div id="animeSearcher"></div>
+
+        <div id="usersDiv"></div>
+
+        <div class="row mt-5" id="showAnimes">
+            <?php foreach ($showAnimes->getResult() as $row) {
+                            echo "<div class='col'> <div class='animeImg'><a href=''><img src='../assets/img/".$row->img."'></a></div><br>";
+                            echo "<strong><a href=''>".$row->nameEng."</a></strong><br>";
+                            echo "<i>".$row->nameJap."</i><br>";
+                            echo "<i>".$row->yearBroadcast."</i></div>";
+                        } ?>
+        </div>
     </section>
 </body>
 </html>

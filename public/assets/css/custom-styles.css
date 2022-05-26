@@ -839,3 +839,119 @@ footer a:hover{
 footer svg:hover{
   color:#764AF1 ;
 }
+
+/* Explorer */
+
+.explore select{
+  width: 150px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+}
+.explore select:focus{
+  outline: none !important;
+}
+
+
+#exploreBar{
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.16);
+}
+
+#exploreBar:focus{
+  outline: none !important;
+}
+
+#exploreUserBar{
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.16);
+}
+#exploreUserBar:focus{
+  outline: none !important;
+}
+
+#listAnimes img{
+    width: 250px;
+    border-radius: 10px;
+}
+#listAnimes a{
+  color: black !important;
+  text-decoration: none;
+  transition: 0.2s;
+}
+#listAnimes a:hover{
+  color: #764AF1 !important;
+}
+
+#showAnimes a{
+  color: #000000 !important;
+  text-decoration: none;
+  transition: 0.2s;
+}
+#showAnimes a:hover{
+  color: #764AF1 !important;
+}
+
+#selectUserOrAnime{
+  box-shadow: none; 
+  width: 250px;
+  text-align: center; 
+}
+
+#selectUserOrAnime option{
+  border: none;
+}
+
+.animeImg{
+  overflow: hidden !important;
+  transition: 0.4s;
+}
+
+.animeImg img{
+  width: 250px;
+  border-radius: 10px;
+  margin: 20px;
+  transition: 0.4s;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.16);
+}
+
+.animeImg:hover img{ 
+  transform: scale(1.05);
+  box-shadow: 8px 8px 0px rgba(123, 0, 255, 0.663);
+}
+
+#userSearcher{
+  margin: auto;
+}
+
+.usernameLink{
+  color: rgb(0, 0, 0) !important;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.usernameLink:hover{
+  color: #764AF1 !important;
+  text-decoration: none;
+}
+
+.profilePic{
+  margin: 50px;
+  border-radius: 10px;
+}
+.profilePic img{
+  width: 100px;
+}
+
+.topUsers{
+  color: red;
+  font-weight: 600;
+}
