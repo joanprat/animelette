@@ -31,6 +31,7 @@ class Home extends BaseController
     public function explore () {
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
+      }
         $tableAnime = new AnimeModel();
 
         $res = $tableAnime->select('max(yearBroadcast) as maxYear')->first(); // Get the max year
@@ -44,15 +45,12 @@ class Home extends BaseController
 
         $this->console_log($data);
         return view('explore', $data);
-      }
-      // ! TODO - Branch explore
-      return view('explore');
     }
     // ? Anime functions
     public function anime ($idAnime) {
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
-        return view('explore', $data);
+        return view('anime', $data);
       }
       // ! TODO - Branch anime
       return view('anime');

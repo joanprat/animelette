@@ -129,9 +129,9 @@ function search() {
                 listAnimes.innerHTML += `
                     <div class='col'>
                         <div class='animeImg'>
-                        <a href=''><img src='../assets/img/${item.img}'></a><br>
+                        <a href='anime/${item.idAnime}'><img src='../assets/img/${item.img}'></a><br>
                         </div>
-                        <strong><a href=''>${item.nameEng}</a></strong><br>
+                        <strong><a href='anime/${item.idAnime}'>${item.nameEng}</a></strong><br>
                         <i>${item.nameJap}</i><br>
                         <i>${item.yearBroadcast}</i>
                     </div>`;
@@ -158,9 +158,8 @@ function searchUser() {
             let datos = JSON.parse(result);
             for (let item of datos) {
                 showUsers.innerHTML += `
-                    
                         <div class='col profilePic'>
-                            <img src='../assets/pictures/${item.profilePic}'><br>
+                            <a href='profile/${item.idUser}'><img src='../assets/pictures/${item.profilePic}'></a><br>
                             <strong class='me-2'><a href='profile/${item.idUser}' class='usernameLink'>${item.username}</a></strong><br> 
                             <span class='bx bxs-hot' style='color: red;'></span><strong><span style='color: red;'>${item.engagement}</span></strong>
                         </div>`;
@@ -170,7 +169,7 @@ function searchUser() {
     variableAjax.open("POST", '../assets/ajax/selectUsers.php', true);
     variableAjax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     variableAjax.send("exploreUserBar=" + exploreUserBar.value);
-
+}
 // ? Animelist functions
 function updateEpisodes(idAnime, idUser, maxEpisodes, action) {
     var _a;
