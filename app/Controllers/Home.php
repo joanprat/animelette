@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use App\Models\ListModel;
 use App\Models\FollowerModel;
+use App\Models\AnimeModel;
+
 
 class Home extends BaseController
 {    
@@ -28,6 +30,18 @@ class Home extends BaseController
     public function explore () {
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
+        $tableAnime = new AnimeModel();
+
+        $res = $tableAnime->select('max(yearBroadcast) as maxYear')->first(); // Get the max year
+        $data["maxYear"] = $res['maxYear'];
+
+        $res = $tableAnime->select('min(yearBroadcast) as minYear')->first(); // Get the min year
+        $data["minYear"] = $res['minYear'];
+
+        $algo = $tableAnime->get();
+        $data["showAnimes"] = $algo;
+
+        $this->console_log($data);
         return view('explore', $data);
       }
       // ! TODO - Branch explore

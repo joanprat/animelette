@@ -1,0 +1,25 @@
+CRITICAL - 2022-05-26 01:07:52 --> Undefined variable: minYear
+#0 C:\wamp64\www\animelette\app\Views\explore.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 63, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('explore', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(48): view('explore')
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->explore()
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-05-26 02:33:55 --> Unknown column 'addDate' in 'order clause'
+CRITICAL - 2022-05-26 02:33:55 --> Unknown column 'addDate' in 'order clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(10, 0)
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(85): CodeIgniter\BaseModel->findAll(10)
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('5')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
