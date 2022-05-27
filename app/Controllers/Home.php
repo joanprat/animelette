@@ -9,6 +9,10 @@ use App\Models\AnimeModel;
 use App\Models\ReviewModel;
 use App\Models\LikeModel;
 
+/**
+ *  Main controller that returns all the views of the app.
+ */
+
 class Home extends BaseController
 {    
     private $db;
@@ -19,12 +23,14 @@ class Home extends BaseController
       $this->db = db_connect();
       $this->db = \Config\Database::connect(); 
     }
+    /**
+     * Function that returns the landing page of the app.
+     */
     public function index(){
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
         return view('home', $data);
       }
-      // ! TODO - Branch home
       return view('home');
     }
     // ? Explore and search functions
@@ -52,11 +58,12 @@ class Home extends BaseController
         $data["sessionData"] = $this->session;
         return view('anime', $data);
       }
-      // ! TODO - Branch anime
       return view('anime');
     }
 
-    // ? Review functions
+    /**
+     * Function that returns the review page of the app. It queries all reviews related data, including number of likes, and loads the view.
+     */
     public function reviews () {
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
@@ -74,6 +81,10 @@ class Home extends BaseController
       return view('reviews', $data);
     }
 
+    /**
+     * Function that returns the details page of a review. It queries all data related to a certain review.
+     * @param int $idReview Id of the review you want to see in detail.
+     */
     public function details($idReview) {
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
@@ -92,7 +103,10 @@ class Home extends BaseController
       return view('details', $data);
     }
 
-    // ? User profile functions
+    /**
+     *  Function that returns the profile page of the requested user. It queries all data related to a certain user.
+     * @param int $refUser Id of the user you want to see the profile of.
+     */
     public function profile ($refUser) {
       // Check if a session has started, if not return to login view
       if($this->session->get('userId')) {
@@ -144,7 +158,11 @@ class Home extends BaseController
       }
     }
 
-    // ? Animelist functions 
+    /**
+     * Function that returns the anime list of a user. It queries all data related to a certain user and certain status
+     * @param int refUser Id of the user you want to see the list of
+     * @param int status Number that is used to filter anime by status, it goes from 0 to 5, and they reference "All", "Watching", "Completed", "On hold", "Dropped" and "Planning" respectively.
+     */
     public function animelist($refUser, $status) {
         // Check if a session has started, if not return to login view
         if($this->session->get('userId')) {
@@ -208,7 +226,9 @@ class Home extends BaseController
         }
     }
 
-    // ? Login and new account functions
+    /**
+     * Function that creates a session for the user and returns the landing page if the credentials provided are valid. If the credentials are not valid, it returns the same view and asks the user to fix all problems.
+     */
     public function login () {
       if($this->request->getPost('login') != '') {
         // Getting data from POST req
@@ -245,6 +265,9 @@ class Home extends BaseController
       }
     }
 
+    /**
+     * Function that returns a view that allows user creation. If the creation goes successfully, return login page, if not, prints errors and asks the user to fix them.
+     */
     public function register () {
       if($this->request->getPost('register') != '') {
         $dataPost = $this->request->getPost();
@@ -290,12 +313,17 @@ class Home extends BaseController
       }
     }
 
+    /**
+     * Function that destroys the session.
+     */
     public function logout () {
       $this->session->destroy();
       return view('login');
     }
 
-    // * PHP Depuration
+    /**
+     * Console log function for php depuration.
+     */
     function console_log( $data ){
       echo '<script>';
       echo 'console.log('. json_encode( $data ) .')';
