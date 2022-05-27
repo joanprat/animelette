@@ -86,8 +86,8 @@
 
         <div class="row mt-5" id="showAnimes">
             <?php foreach ($showAnimes->getResult() as $row) {
-                            echo "<div class='col'> <div class='animeImg'><a href=''><img src='../assets/img/".$row->img."'></a></div><br>";
-                            echo "<strong><a href=''>".$row->nameEng."</a></strong><br>";
+                            echo "<div class='col'> <div class='animeImg'><a href='".$fullPath."/"."anime"."/".$row->idAnime."'><img src='../assets/img/".$row->img."'></a></div><br>";
+                            echo "<strong><a href='".$fullPath."/"."anime"."/".$row->idAnime."'>".$row->nameEng."</a></strong><br>";
                             echo "<i>".$row->nameJap."</i><br>";
                             echo "<i>".$row->yearBroadcast."</i></div>";
                         } ?>
