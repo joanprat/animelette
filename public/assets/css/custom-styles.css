@@ -25,6 +25,7 @@
 }
 .dropdown-menu #profile-option {
   transition: all 1s;
+  border: none !important;
 }
 .dropdown-menu #profile-option:hover{
   transform: translateX(0.5em);
@@ -615,6 +616,16 @@ tr:hover .red-icon {
   color: #EB1C24;
   text-decoration: underline;
 }
+.user-mobile{
+  color: #EB1C24;
+  font-weight: 700;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+.user-mobile:hover{
+  color: #EB1C24;
+  text-decoration: underline;
+}
 
 /* Footer */
 .review-footer img{
@@ -806,10 +817,20 @@ tr:hover .red-icon {
   }
 }
 footer{
-  height: 40vh;
+  /* height: 40vh; */
   background-color: #383838;
-  color: white;
-  padding: 50px;
+  color: #FFFFFF;
+  /* padding: 50px; */
+}
+.sns a{
+  font-size: 2em !important;
+}
+footer p {
+  color: #ffffff7a;
+  font-size: 0.8em;
+}
+.donate a {
+  font-size: 2em !important;
 }
 
 .primerUl{
@@ -817,10 +838,12 @@ footer{
 }
 footer a{
   color: white;
+  font-weight: 500;
   text-decoration: none;
 }
 footer a:hover{
   color: #764AF1;
+  font-weight: 500;
   text-decoration: none;
 }
 .segundoUl{
@@ -839,6 +862,9 @@ footer a:hover{
 footer svg:hover{
   color:#764AF1 ;
 }
+footer h2 {
+  font-size: 1.5em;
+}
 
 /* Explorer */
 
@@ -854,13 +880,29 @@ footer svg:hover{
 .explore select:focus{
   outline: none !important;
 }
-
+.explore h2 {
+  color: #764AF1;
+  font-weight: 700;
+}
+#explorerDiv select {
+  border-left: 4px solid #764AF1;
+  border-radius: 0px 10px 10px 0px !important;
+  background-color: #FFFFFF;
+  width: 360px;
+  text-align: left !important;
+}
+#animeSearcher select{
+  width: 100%;
+  border-left: 4px solid #764AF1;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #FFFFFF;
+}
 
 #exploreBar{
-  width: 400px;
-  padding: 10px;
-  border-radius: 10px;
+  width: 100%;
   border: none;
+  border-left: 4px solid #764AF1;
+  border-radius: 0px 10px 10px 0px !important;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.16);
 }
 
@@ -869,10 +911,10 @@ footer svg:hover{
 }
 
 #exploreUserBar{
-  width: 400px;
-  padding: 10px;
-  border-radius: 10px;
+  width: 100%;
   border: none;
+  border-left: 4px solid #764AF1;
+  border-radius: 0px 10px 10px 0px !important;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.16);
 }
 #exploreUserBar:focus{
@@ -902,9 +944,11 @@ footer svg:hover{
 }
 
 #selectUserOrAnime{
-  box-shadow: none; 
-  width: 250px;
-  text-align: center; 
+  border-left: 4px solid #764AF1;
+  border-radius: 0px;
+  background-color: #FFFFFF;
+  width: 360px;
+  text-align: left;
 }
 
 #selectUserOrAnime option{
@@ -954,4 +998,11 @@ footer svg:hover{
 .topUsers{
   color: red;
   font-weight: 600;
+}
+.no-data-found {
+  color: #323232c5;
+  font-weight: 700;
+}
+.no-data-found span {
+  color: #764AF1;
 }

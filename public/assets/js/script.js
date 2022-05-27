@@ -19,7 +19,7 @@ function swapExplorer() {
     animeSearcher.innerHTML = "";
     if (selectUserOrAnime.value == "User") {
         var usersDiv = document.getElementById("usersDiv");
-        usersDiv.innerHTML += '<input type="text" id="exploreUserBar" placeholder="Search a User" class="mb-5"  onkeyup="searchUser()">';
+        usersDiv.innerHTML += '<input type="text" id="exploreUserBar" placeholder="Type here the name of the user you are looking for" class="p-3 mb-5"  onkeyup="searchUser()">';
         usersDiv.innerHTML += `<div id="showUsers" class="row"></div>`;
     }
     if (selectUserOrAnime.value == "Anime") {
@@ -31,14 +31,13 @@ function swapExplorer() {
         var maxYear = parseInt(maxYearIn.value);
         var animeSearcher = document.getElementById("animeSearcher");
         var res = `
-        <input type="text" id="exploreBar" placeholder="Search an Anime" onkeyup="search()" class="mb-5">
+        <input type="text" id="exploreBar" placeholder="Type here the name of the anime you want to search" onkeyup="search()" class="p-3 mb-4">
 
         <div class="row mb-5" id="listUsers">
         
                 <div class="col">
-                    <p>Genre</p>
                     <select id="selectGenre" onchange="search()">
-                        <option default>Any</option>
+                        <option default value="Any">Genre</option>
                         <option>Shoujo</option>
                         <option>Shounen</option>
                         <option>Seinen</option>
@@ -68,9 +67,8 @@ function swapExplorer() {
                 </div>
 
                 <div class="col">
-                    <p>Year</p>
                         <select id='selectYear' onchange='search()'>
-                            <option styles='width: 300px' default>Any</option>
+                            <option styles='width: 300px' default value="Any">Year</option>
                             `;
         for (var i = minYear; i < maxYear; i++) {
             res += `<option styles='width: 300px'>` + i + `</option>`;
@@ -81,9 +79,8 @@ function swapExplorer() {
                 </div>
 
                 <div class="col">
-                    <p>Season</p>
                     <select id="selectSeason" onchange="search()">
-                        <option default>Any</option>
+                        <option default value="Any">Season</option>
                         <option>Winter</option>
                         <option>Fall</option>
                         <option>Spring</option>
@@ -92,9 +89,8 @@ function swapExplorer() {
                 </div>
 
                 <div class="col">
-                    <p>Format</p>
                     <select id="selectFormat" onchange="search()">
-                        <option default>Any</option>
+                        <option default value="Any">Format</option>
                         <option>TV</option>
                         <option>Movie</option>
                         <option>OVA</option>

@@ -145,6 +145,7 @@
                         <!-- Top anime -->
                         <div class="container white-container mb-4 py-4 text-start">
                             <p class="title text-center">Favourite anime</p>
+                            <?= sizeof($recentAnime) == 0 ? '<p class="text-center no-data-found"> <span>&lt;</span> No favourite anime yet <span>&gt;</span> </p>' : '' ?>
                             <?php foreach ($topAnime as $key => $anime) { ?>
                             <div class="container my-3 top-anime-container">
                                 <div class="d-flex flex-row align-items-center">
@@ -166,6 +167,7 @@
                         <!-- Reviews -->
                         <div class="container white-container py-4 text-start">
                             <p class="title text-center">Reviews</p>
+                            <?= sizeof($recentAnime) == 0 ? '<p class="text-center no-data-found"> <span>&lt;</span> No reviews published <span>&gt;</span> </p>' : '' ?>
                             <?php foreach ($userData['reviews'] as $key => $review) { ?>
                                 <div class="container my-4 review-container-profile p-3">
                                     <a class="review-title-profile my-0" href="<?= $fullPath."/anime"."/".$review['idAnime'] ?>"><?= $review['nameJap'] ?></a>
@@ -283,6 +285,7 @@
                     <hr class="my-5">
                     <div class="container text-start d-none d-sm-block">
                         <p class="title">Recent Anime Updates</p>
+                        <?= sizeof($recentAnime) == 0 ? '<p class="text-start no-data-found"> <span>&lt;</span> No recent anime updates found <span>&gt;</span> </p>' : '' ?>
                         <?php
                             foreach ($recentAnime as $key => $anime) {
                                 $txt = '';
@@ -336,6 +339,7 @@
                     <hr class="my-5 d-none d-sm-block d-md-block d-lg-none">
                     <div class="container white-container py-4 my-4 text-start d-block d-lg-none">
                         <p class="title">Reviews</p>
+                        <?= sizeof($recentAnime) == 0 ? '<p class="text-start no-data-found"> <span>&lt;</span> No reviews published <span>&gt;</span> </p>' : '' ?>
                         <?php foreach ($userData['reviews'] as $key => $review) { ?>
                             <div class="container my-4 review-container-profile p-3">
                                 <a class="review-title-profile my-0" href="<?= $fullPath."/anime"."/".$review['idAnime'] ?>"><?= $review['nameJap'] ?></a>

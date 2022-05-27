@@ -67,22 +67,23 @@
         </div>
     </nav>
     <section class="container text-center mt-4 explore">
-        <!-- // ! TODO - Branch explore -->
-    
-    <div class="container" id="explorerDiv">
-        <input type="hidden" value="<?= $minYear?>" id="minYear">
-        <input type="hidden" value="<?= $maxYear?>" id="maxYear">
+        <div class="container">
+            <h2 class="text-start">Find new animes or users</h2>    
+        </div>
+        <div class="container text-start my-4" id="explorerDiv">
+            <input type="hidden" value="<?= $minYear?>" id="minYear">
+            <input type="hidden" value="<?= $maxYear?>" id="maxYear">
 
-        <select onchange="swapExplorer()" id="selectUserOrAnime">
-            <option default>Select an option</option>
-            <option>Anime</option>
-            <option>User</option>
-        </select><br> 
-    </div>
+            <select onchange="swapExplorer()" id="selectUserOrAnime">
+                <option default>Select what do you want to search</option>
+                <option>Anime</option>
+                <option>User</option>
+            </select><br> 
+        </div>
         
-        <div id="animeSearcher"></div>
+        <div class="container" id="animeSearcher"></div>
 
-        <div id="usersDiv"></div>
+        <div class="container" id="usersDiv"></div>
 
         <div class="row mt-5" id="showAnimes">
             <?php foreach ($showAnimes->getResult() as $row) {
