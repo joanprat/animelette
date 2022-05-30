@@ -1005,4 +1005,102 @@ footer h2 {
 }
 .no-data-found span {
   color: #764AF1;
+
+/* entry sec */
+
+.anime-head {
+  color: #383838;
+  font-weight: bold;
+  top: -6em;
+  width: 100%;
+  position: relative;
+  margin-bottom: -10em;
+}
+
+.anipic img {
+  position: relative;
+  width: 225px;
+  border-radius: 5%;
+  top: -6em;
+}
+
+.ani-info{
+  background: #F9F9F9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px 15px 0px 0px;
+  /* line-height: 75%; */
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.val{
+  color: rgb(146,153,161);
+}
+
+.btn-add {
+  background-color: #16ff3c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-fav {
+  background: #FF0000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-submit {
+  background: rgb(0, 149, 255);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.textarea-rev{
+  
+}
+
+.rectangle img{
+  width: 100px;
+}
+
+.rectangle{
+  background: #F9F9F9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  width: max-content;
+}
+
+.rectangle p {
+  margin: 0%;
+}
+
+.estrella{
+  color: #21D754 !important;
+}
+
+.campo-reviews{
+  border-radius: 20px;
+}
+
+.pfp-mini img{
+  width: 70px;
 }

@@ -1,84 +1,75 @@
-ERROR - 2022-05-25 02:03:10 --> Unknown column 'addDate' in 'order clause'
-CRITICAL - 2022-05-25 02:03:10 --> Unknown column 'addDate' in 'order clause'
-#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
-#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
-#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
-#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(10, 0)
-#6 C:\wamp64\www\animelette\app\Controllers\Home.php(85): CodeIgniter\BaseModel->findAll(10)
-#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('5')
-#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
-#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
-#11 {main}
-ERROR - 2022-05-25 02:20:32 --> Unknown column 'addDate' in 'order clause'
-CRITICAL - 2022-05-25 02:20:32 --> Unknown column 'addDate' in 'order clause'
-#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
-#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
-#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
-#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(10, 0)
-#6 C:\wamp64\www\animelette\app\Controllers\Home.php(85): CodeIgniter\BaseModel->findAll(10)
-#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('5')
-#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
-#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
-#11 {main}
-ERROR - 2022-05-25 02:23:42 --> Unknown column 'addDate' in 'order clause'
-CRITICAL - 2022-05-25 02:23:42 --> Unknown column 'addDate' in 'order clause'
-#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
-#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
-#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
-#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(10, 0)
-#6 C:\wamp64\www\animelette\app\Controllers\Home.php(85): CodeIgniter\BaseModel->findAll(10)
-#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('2')
-#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
-#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
-#11 {main}
-ERROR - 2022-05-25 02:50:54 --> Unknown column 'addDate' in 'order clause'
-CRITICAL - 2022-05-25 02:50:54 --> Unknown column 'addDate' in 'order clause'
-#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
-#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
-#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
-#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(10, 0)
-#6 C:\wamp64\www\animelette\app\Controllers\Home.php(85): CodeIgniter\BaseModel->findAll(10)
-#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('1')
-#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
-#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
-#11 {main}
-ERROR - 2022-05-25 03:52:10 --> Unknown column 'addDate' in 'order clause'
-CRITICAL - 2022-05-25 03:52:10 --> Unknown column 'addDate' in 'order clause'
-#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
-#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
-#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
-#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(10, 0)
-#6 C:\wamp64\www\animelette\app\Controllers\Home.php(85): CodeIgniter\BaseModel->findAll(10)
-#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('1')
-#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
-#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
-#11 {main}
-ERROR - 2022-05-25 05:05:40 --> Unknown column 'addDate' in 'order clause'
-CRITICAL - 2022-05-25 05:05:40 --> Unknown column 'addDate' in 'order clause'
-#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
-#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
-#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
-#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(10, 0)
-#6 C:\wamp64\www\animelette\app\Controllers\Home.php(85): CodeIgniter\BaseModel->findAll(10)
-#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('2')
-#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
-#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
-#11 {main}
+CRITICAL - 2022-05-25 01:13:55 --> Undefined variable: animeData
+#0 C:\wamp64\www\animelette\app\Views\anime.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 72, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(50): view('anime')
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('4')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-25 01:14:00 --> Undefined variable: animeData
+#0 C:\wamp64\www\animelette\app\Views\anime.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 72, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(50): view('anime')
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('9')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-25 01:14:23 --> Undefined variable: animeData
+#0 C:\wamp64\www\animelette\app\Views\anime.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 72, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(50): view('anime')
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('10')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-25 01:24:17 --> Undefined variable: userData
+#0 C:\wamp64\www\animelette\app\Views\anime.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 67, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(50): view('anime')
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('10')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-25 01:24:43 --> Undefined variable: animeData
+#0 C:\wamp64\www\animelette\app\Views\anime.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 76, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(50): view('anime')
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('10')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-25 02:09:46 --> Undefined variable: animeData
+#0 C:\wamp64\www\animelette\app\Views\anime.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 84, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(50): view('anime')
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('14')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-25 03:24:05 --> Undefined variable: totalTime
+#0 C:\wamp64\www\animelette\system\Debug\Toolbar\Views\toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 40, Array)
+#1 C:\wamp64\www\animelette\system\Debug\Toolbar.php(501): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\Debug\Toolbar.php(464): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#3 C:\wamp64\www\animelette\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#4 C:\wamp64\www\animelette\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(308): CodeIgniter\Events\Events::trigger('pre_system')
+#6 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

@@ -1,47 +1,91 @@
-CRITICAL - 2022-05-26 01:07:52 --> Undefined variable: minYear
-#0 C:\wamp64\www\animelette\app\Views\explore.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 63, Array)
-#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
-#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
-#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('explore', Array, true)
-#4 C:\wamp64\www\animelette\app\Controllers\Home.php(48): view('explore')
-#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->explore()
+CRITICAL - 2022-05-26 02:38:52 --> Too few arguments to function App\Controllers\Home::anime(), 0 passed in C:\wamp64\www\animelette\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime()
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-05-26 10:34:24 --> Error connecting to the database: Unknown database 'animelette'
+CRITICAL - 2022-05-26 10:34:24 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'animelette'
+#0 C:\wamp64\www\animelette\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `user`.`...', Array, false)
+#2 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '4')
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(83): CodeIgniter\BaseModel->find('4')
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->details('4')
 #6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
-ERROR - 2022-05-26 02:33:55 --> Unknown column 'addDate' in 'order clause'
-CRITICAL - 2022-05-26 02:33:55 --> Unknown column 'addDate' in 'order clause'
-#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
-#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
-#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
-#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(10, 0)
-#6 C:\wamp64\www\animelette\app\Controllers\Home.php(85): CodeIgniter\BaseModel->findAll(10)
-#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->profile('5')
-#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
-#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
-#11 {main}
-CRITICAL - 2022-05-26 03:34:15 --> Undefined variable: minYear
-#0 C:\wamp64\www\animelette\app\Views\explore.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 73, Array)
+CRITICAL - 2022-05-26 10:35:34 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\details.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 71, Array)
 #1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
 #2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
-#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('explore', Array, true)
-#4 C:\wamp64\www\animelette\app\Controllers\Home.php(53): view('explore', Array)
-#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('8')
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('details', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('details', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->details('4')
 #6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
-CRITICAL - 2022-05-26 03:34:35 --> Undefined variable: minYear
-#0 C:\wamp64\www\animelette\app\Views\explore.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 73, Array)
+CRITICAL - 2022-05-26 10:35:35 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\details.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 71, Array)
 #1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
 #2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
-#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('explore', Array, true)
-#4 C:\wamp64\www\animelette\app\Controllers\Home.php(53): view('explore', Array)
-#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('8')
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('details', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('details', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->details('4')
 #6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2022-05-26 10:35:36 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\details.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 71, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('details', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('details', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->details('4')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-26 10:35:37 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\details.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 71, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('details', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('details', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->details('4')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-26 10:36:51 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\details.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 71, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('details', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('details', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->details('4')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-26 10:36:53 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\details.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 71, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('details', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('details', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->details('4')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-26 10:37:01 --> Too few arguments to function App\Controllers\Home::details(), 0 passed in C:\wamp64\www\animelette\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->details()
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

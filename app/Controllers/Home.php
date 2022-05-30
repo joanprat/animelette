@@ -8,6 +8,8 @@ use App\Models\FollowerModel;
 use App\Models\AnimeModel;
 use App\Models\ReviewModel;
 use App\Models\LikeModel;
+use App\Models\AnimeModel;
+use App\Models\AnimeGenreModel;
 
 /**
  *  Main controller that returns all the views of the app.
@@ -56,8 +58,12 @@ class Home extends BaseController
     public function anime ($idAnime) {
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
-        return view('anime', $data);
       }
+      $tableAnime = new AnimeModel();
+      $tableGenreAnime = new AnimeGenreModel();
+      
+      $data['animeData'] = $tableAnime->where('idAnime', $idAnime)->findAll();
+      $this->console_log($data);      
       return view('anime');
     }
 
