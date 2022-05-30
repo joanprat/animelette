@@ -9,6 +9,7 @@
     <link rel="icon" href="<?= base_url('assets/pictures/logo_small.png')?>">
     <!-- Custom -->
     <link rel="stylesheet" href="<?= base_url('assets/css/custom-styles.css') ?>">
+    <script src="<?= base_url('assets/js/script.js')?>"></script>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
@@ -20,7 +21,7 @@
 <?php $fullPath = base_url('Home') ?>
 
 <body class="login-body">
-    <nav class="navbar navbar-expand-lg nav-background-opacity">
+    <nav class="navbar navbar-expand-lg">
         <div class="container text-cemter">
         <a class="navbar-brand" href="<?= $fullPath ?>"><img src="<?= base_url('assets/pictures/logo.png')?>" width="200"></a> 
             <span class="navbar-toggler bi bi-list" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
@@ -72,128 +73,141 @@
     <!-- ********** FIN NAV ********** -->
     <section class="container-fluid text-left m-0 p-0">
         <div class="container-fluid banner px-0">
-            <img class="image-fluid" src="http://localhost/animelette/public/assets/img/kaguya-sama_banner.jpg" alt="Banner of the anime">
+            <img class="image-fluid" src="<?= base_url('assets/img')."/".$animeData[0]["banner"] ?>" alt="Banner of the anime">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
                     <article class="container-fluid px-0 anime-head">
                         <div class="container anipic">
-                            <img class="image-fluid" src="http://localhost/animelette/public/assets/img/kaguya-sama_img.jpg" alt="Picture of the anime">
+                            <img class="image-fluid" src="<?= base_url('assets/img')."/".$animeData[0]["img"] ?>" alt="Picture of the anime">
                         </div>
-                        <div class="d-flex flex-row">
+                        <div class="d-flex flex-row mb-5">
                             <div class="col-12">
                                 <div class="container white-container mb-4 py-4">
                                     <p>English</p>
-                                    <p class="val">Kaguya-sama: Love Is War</p>
+                                    <p class="val"><?= $animeData[0]["nameEng"] ?></p>
                                     <p>Romaji</p>
-                                    <p class="val">Kaguya-sama wa Kokurasetai: Tensai-tachi no Ren'ai Zunōsen</p>
+                                    <p class="val"><?= $animeData[0]["nameJap"] ?></p>
                                     <p>Airing start</p>
-                                    <p class="val">2022-04-02</p>
+                                    <p class="val"><?= $animeData[0]["airingStart"] ?></p>
                                     <p>Airing finish</p>
-                                    <p class="val">2022-03-27</p>
+                                    <p class="val"><?= $animeData[0]["airingFinish"] ?></p>
                                     <p>Season</p>
-                                    <p class="val">Spring 2022</p>
+                                    <p class="val"><?= $animeData[0]["season"]." ".$animeData[0]["yearBroadcast"] ?></p>
                                     <p>Studio</p>
-                                    <p class="val">Ufotable</p>
+                                    <p class="val"><?= $animeData[0]["studio"] ?></p>
                                     <p>Format</p>
-                                    <p class="val">TV</p>
+                                    <p class="val"><?= $animeData[0]["type"] ?></p>
                                     <p>Episodes</p>
-                                    <p class="val">26</p>
+                                    <p class="val"><?= $animeData[0]["totalEpisodes"] ?></p>
                                     <p>Episode duration</p>
-                                    <p class="val">24 mins</p>
+                                    <p class="val"><?= $animeData[0]["duration"]." min" ?></p>
                                     <p>Source</p>
-                                    <p class="val">Manga</p>
+                                    <p class="val"><?= $animeData[0]["source"] ?></p>
                                 </div>
                             </div>
                         </div>
                     </article>
                 </div>
                 <div class="col-sm-8">
-                    <div class="container text-start">
-                        <h1>Kaguya-sama wa Kokurasetai: Tensai-tachi no Ren'ai Zunōsen</h1>
-                        <p>Score 8.54 <span class="bi bi-star-fill estrella"></span></p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel itaque, qui ex consectetur ea nam ad odit nisi magni. Recusandae commodi adipisci dolores delectus alias eius dolor sint provident minus molestiae! Ratione obcaecati repudiandae sapiente esse atque voluptatibus dolores assumenda!
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt quibusdam voluptatum veritatis et veniam atque eaque nisi eum nam, ab minus facilis dolorem quam tempora?</p>
-
-
-                        <button type="button" class="btn-add"><b>ADD TO MY LIST <span class="bi bi-plus-lg"></span></b></button>
-                        <p></p>
-                        <button type="button" class="btn-fav"><b>DELETE <span class="bi bi-trash3-fill"></span> </b></button>
+                    <div class="container text-start anime-info my-4">
+                        <p class="title mb-0"><?= $animeData[0]["nameJap"] ?></p>
+                        <p class="score"><?= "Score ".$medianScore["score"] ?> <span class="bi bi-star-fill estrella"></span></p>
+                        <p><?= $animeData[0]["synopsis"] ?></p>
+                        <?php if (isset($sessionData)) { ?>
+                        <div class="d-flex flex-row align-items-center text-center" id="user-anime-status">
+                            <?php if(sizeof($isInList) > 0) { ?>
+                                <button type="button" class="btn-fav" onclick="removeAnimeFromList(<?= $sessionData->userId ?>, <?= $animeData[0]['idAnime'] ?>)"><b>Remove from list <span class="bi bi-trash3-fill"></span> </b></button>
+                            <?php }else { ?>
+                            <div class="col-3">
+                                <button type="button" class="btn-add p-3 me-2" onclick="addAnimeToList(this, <?= $sessionData->userId ?>, <?= $animeData[0]['idAnime'] ?>, <?= $animeData[0]['totalEpisodes'] ?>)"><b>Add to my list <span class='bx bx-plus-medical'></span></b></button>
+                            </div>
+                            <div class="col-3 me-2">
+                                <label for="episodes" class="form-label visually-hidden">Number of empisodes seen</label>
+                                <input class="form-control p-3 add-anime" type="number" min="0" max="<?= $animeData[0]['totalEpisodes'] ?>" class="form-control" id="episodes" placeholder="Episodes / <?= $animeData[0]['totalEpisodes'] ?>">
+                            </div>
+                            <div class="col-3 me-2">
+                                <label for="score" class="form-label visually-hidden">Score</label>
+                                <input class="form-control p-3 add-anime" type="number" min="0" max="10" class="form-control" id="score" placeholder="Score / 10">
+                            </div>
+                            <div class="col-3">
+                                <select class="form-select p-3 add-anime" aria-label="Default select example">
+                                    <option value="" selected disabled>Status</option>
+                                    <option value="watching">Watching</option>
+                                    <option value="completed">Completed</option>
+                                    <option value="on hold">On hold</option>
+                                    <option value="dropped">Dropped</option>
+                                    <option value="planning">Planning</option>
+                                </select>
+                            </div>
+                           <?php } ?> 
+                        </div>
+                        <?php } ?>
                     </div>
                     <div class="container">
                         <hr>
                     </div>
                     <div class="container">
-                        <p>Characters</p>
-                        <div class="col-6 my-4">
-                            <div class="d-flex flex-row align-items-center rectangle">
+                        <p class="section-title my-4">Cast</p>
+                        <?php 
+                        foreach ($char_va as $key => $row) {
+                        ?>
+                            <div class="d-flex flex-row align-items-center my-4 char-va">
                                 <div class="col-2">
-                                    <img class="img-fluid" src="http://localhost/animelette/public/assets/img/levi.png">
+                                    <img class="img-fluid" src="<?= base_url('assets/img').'/'.$row['charimg'] ?>">
                                 </div>
                                 <div class="col-8 text-center">
-                                    <p>Hidenori Tabata</p>
+                                    <p class="name-char"><?= $row['surnameCharacter']." ".$row['nameCharacter'] ?></p>
                                     <p>as</p>
-                                    <p>Tomokazu Sugita</p>
+                                    <p class="name-va"><?= $row['surnameVa']." ".$row['nameVa'] ?></p>
                                 </div>
                                 <div class="col-2">
-                                    <img class="img-fluid" src="http://localhost/animelette/public/assets/img/tomokazusugita.png">
+                                    <img class="img-fluid" src="<?= base_url('assets/img').'/'.$row['vaimg'] ?>">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-6 my-4">
-                            <div class="d-flex flex-row align-items-center rectangle">
-                                <div class="col-2">
-                                    <img class="img-fluid" src="http://localhost/animelette/public/assets/img/levi.png">
-                                </div>
-                                <div class="col-8 text-center">
-                                    <p>Hidenori Tabata</p>
-                                    <p>as</p>
-                                    <p>Tomokazu Sugita</p>
-                                </div>
-                                <div class="col-2">
-                                    <img class="img-fluid" src="http://localhost/animelette/public/assets/img/hiroshikamiya.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 my-4">
-                            <div class="d-flex flex-row align-items-center rectangle">
-                                <div class="col-2">
-                                    <img class="img-fluid" src="http://localhost/animelette/public/assets/img/daki.jpg">
-                                </div>
-                                <div class="col-8 text-center">
-                                    <p>Hidenori Tabata</p>
-                                    <p>as</p>
-                                    <p>Tomokazu Sugita</p>
-                                </div>
-                                <div class="col-2">
-                                    <img class="img-fluid" src="http://localhost/animelette/public/assets/img/miyukisawashiro.jpg">
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        } 
+                        ?>
                     </div>
-
                     <div class="container">
                         <hr>
-                        <p>Reviews</p>
-                        <div class="row">
-                            <div class="col-2 d-none d-sm-block d-md-block pfp-mini">
-                                <img src="http://localhost/animelette/public/assets/pictures/hikarip_pfp.png">
-                            </div>
-                            <div class="col-10">
-                                <textarea class="form-control textarea-rev" placeholder="What do you think about this anime? Explain yourself!" onfocus="this.rows=10"></textarea>
-                            </div>
-                            <p></p>
-                            <button type="button" class="btn-submit"><b>PUBLISH</b></button>
-                        </div>
-                        <div class=" col-2 d-none d-sm-block d-md-block pfp-mini">
-                            <img src="http://localhost/animelette/public/assets/pictures/hikarip_pfp.png">
-                        </div>
                     </div>
-
-                    <div class="container">
-                        <hr>
-                        <p>Status per user</p>
+                    <div class="container review-anime">
+                        <p class="section-title my-4">Reviews</p>
+                        <?php if (isset($sessionData)) { ?>
+                        <div class="container p-4 white-container" id="review-publish">
+                            <div class="d-flex flex-row mb-4 align-items-stretch p-4">
+                                <div class="col-2">
+                                    <img class="img-fluid" src="<?= base_url('assets/pictures')."/".$sessionData->pfp ?>">
+                                </div>
+                                <div class="col-10 ps-4">
+                                    <div class="form-floating">
+                                        <textarea class="p-2" placeholder="Share your thougths" id="reviewAnime"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn custom-btn" type="button" onclick="publishReview(<?= $sessionData->userId ?>, <?= $animeData[0]['idAnime'] ?>)">Publish</button>
+                            </div>                            
+                        </div>
+                        <?php } ?>
+                        <?php foreach ($reviews as $key => $review) {
+                        ?>
+                        <div class="d-flex flex-row mb-4 align-items-stretch my-4 white-container p-4">
+                            <div class="col-2 text-center">
+                                <img class="img-fluid my-2" src="<?= base_url('assets/pictures')."/".$review['profilePic'] ?>">
+                                <a class="profile-link" href="<?= $fullPath."/profile"."/".$review['idUser'] ?>"><?= $review['username'] ?></a>
+                                <p class="engagement my-2"><strong><?= $review['likes'] ?><span class='bx bxs-hot'></span></strong></p>
+                                <p class="my-2 publication-date"><?= $review['date'] ?></p>
+                            </div>
+                            <div class="col-10 ps-4">
+                                <p><?= substr($review['content'], 0 , 500) ?>...</p>
+                                <a href="<?= $fullPath."/details"."/".$review['idReview'] ?>" class="more">See more</a>
+                            </div>
+                        </div>
+                        <?php
+                        }?>
                     </div>
                 </div>
             </div>
@@ -219,7 +233,7 @@
                     <a href="https://github.com/joanprat/animelette"><i class='bx bxl-github' ></i></a>
                 </div>
                 <div class="conatiner col donate">
-                    <h2><strong>HELP US TO BUID ANIMELETTE</strong></h2>
+                    <h2><strong>HELP US TO BUILD ANIMELETTE</strong></h2>
                     <p>If you like our work think about giving a donation!</p>
                     <a href=""><i class='bx bx-coffee-togo' ></i></a>
                     <a href=""><i class='bx bxl-patreon' ></i></a>

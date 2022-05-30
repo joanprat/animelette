@@ -229,7 +229,7 @@
                     <a href="https://github.com/joanprat/animelette"><i class='bx bxl-github' ></i></a>
                 </div>
                 <div class="conatiner col donate">
-                    <h2><strong>HELP US TO BUID ANIMELETTE</strong></h2>
+                    <h2><strong>HELP US TO BUILD ANIMELETTE</strong></h2>
                     <p>If you like our work think about giving a donation!</p>
                     <a href=""><i class='bx bx-coffee-togo' ></i></a>
                     <a href=""><i class='bx bxl-patreon' ></i></a>

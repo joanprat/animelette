@@ -1,3 +1,1123 @@
 CRITICAL - 2022-05-30 02:20:32 --> Cannot use App\Models\AnimeModel as AnimeModel because the name is already in use
 #0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
 #1 {main}
+CRITICAL - 2022-05-30 02:45:48 --> Undefined variable: animeData
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime')
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:46:05 --> Undefined index: synopsis
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:46:07 --> Undefined index: synopsis
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:46:07 --> Undefined index: synopsis
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:46:07 --> Undefined index: synopsis
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:46:07 --> Undefined index: synopsis
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:47:12 --> Undefined index: synopsis
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:47:54 --> Undefined index: synopsis
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:47:56 --> Undefined index: synopsis
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:47:58 --> Undefined index: synopsis
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:48:36 --> Undefined index: nameJap
+#0 C:\wamp64\www\animelette\app\Views\anime.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 114, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:48:37 --> Undefined index: nameJap
+#0 C:\wamp64\www\animelette\app\Views\anime.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 114, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:48:37 --> Undefined index: nameJap
+#0 C:\wamp64\www\animelette\app\Views\anime.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 114, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:48:37 --> Undefined index: nameJap
+#0 C:\wamp64\www\animelette\app\Views\anime.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 114, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:48:37 --> Undefined index: nameJap
+#0 C:\wamp64\www\animelette\app\Views\anime.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 114, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:49:42 --> Undefined index: synopsis
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:50:28 --> Undefined variable: base_url
+#0 C:\wamp64\www\animelette\app\Views\anime.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 82, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(66): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-05-30 02:56:51 --> Incorrect parameter count in the call to native function 'DATE_FORMAT'
+CRITICAL - 2022-05-30 02:56:51 --> Incorrect parameter count in the call to native function 'DATE_FORMAT'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `idAnime...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idAnime...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idAnime...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `idAnime...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(65): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-05-30 02:57:12 --> Undefined index: img
+#0 C:\wamp64\www\animelette\app\Views\anime.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 82, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(67): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:57:21 --> Undefined index: airingStart
+#0 C:\wamp64\www\animelette\app\Views\anime.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 92, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(67): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:58:27 --> Undefined index: year
+#0 C:\wamp64\www\animelette\app\Views\anime.php(96): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 96, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(67): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 02:59:03 --> Undefined index: format
+#0 C:\wamp64\www\animelette\app\Views\anime.php(100): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 100, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(67): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 03:03:37 --> syntax error, unexpected '$this' (T_VARIABLE)
+#0 C:\wamp64\www\animelette\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Home/anime/21')
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Home/anime/21')
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-30 03:03:38 --> syntax error, unexpected '$this' (T_VARIABLE)
+#0 C:\wamp64\www\animelette\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Home/anime/21')
+#1 C:\wamp64\www\animelette\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Home/anime/21')
+#2 C:\wamp64\www\animelette\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-05-30 03:04:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+CRITICAL - 2022-05-30 03:04:59 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT AVG(scor...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT AVG(scor...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT AVG(scor...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT AVG(scor...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(67): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:05:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+CRITICAL - 2022-05-30 03:05:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT CAST(sco...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CAST(sco...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CAST(sco...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT CAST(sco...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(67): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:05:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+CRITICAL - 2022-05-30 03:05:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT CAST((sc...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CAST((sc...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CAST((sc...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT CAST((sc...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(67): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:05:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+CRITICAL - 2022-05-30 03:05:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT CAST((sc...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CAST((sc...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CAST((sc...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT CAST((sc...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(67): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:05:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+CRITICAL - 2022-05-30 03:05:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT CAST((sc...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CAST((sc...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CAST((sc...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT CAST((sc...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(67): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:05:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+CRITICAL - 2022-05-30 03:05:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT CAST((sc...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CAST((sc...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CAST((sc...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT CAST((sc...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(67): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:05:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+CRITICAL - 2022-05-30 03:05:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT CAST((sc...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CAST((sc...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CAST((sc...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT CAST((sc...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(67): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:05:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+CRITICAL - 2022-05-30 03:05:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 2)
+FROM `list`
+WHERE `list`.`idList` = '21'' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT CAST((sc...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT CAST((sc...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT CAST((sc...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT CAST((sc...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(67): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-05-30 03:06:47 --> Undefined index: score
+#0 C:\wamp64\www\animelette\app\Views\anime.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 115, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(69): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 03:06:55 --> Undefined variable: score
+#0 C:\wamp64\www\animelette\app\Views\anime.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\a...', 115, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(69): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 03:07:06 --> Array to string conversion
+#0 C:\wamp64\www\animelette\app\Views\anime.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\a...', 115, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(69): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 03:07:12 --> Array to string conversion
+#0 C:\wamp64\www\animelette\app\Views\anime.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\wamp64\\www\\a...', 115, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(69): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 03:07:23 --> Undefined offset: 0
+#0 C:\wamp64\www\animelette\app\Views\anime.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\wamp64\\www\\a...', 115, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(69): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-05-30 03:16:22 --> Unknown column 'refAnime' in 'from clause'
+CRITICAL - 2022-05-30 03:16:22 --> Unknown column 'refAnime' in 'from clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:16:47 --> Unknown column 'refAnime' in 'from clause'
+CRITICAL - 2022-05-30 03:16:47 --> Unknown column 'refAnime' in 'from clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:16:48 --> Unknown column 'refAnime' in 'from clause'
+CRITICAL - 2022-05-30 03:16:48 --> Unknown column 'refAnime' in 'from clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:16:48 --> Unknown column 'refAnime' in 'from clause'
+CRITICAL - 2022-05-30 03:16:48 --> Unknown column 'refAnime' in 'from clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:16:48 --> Unknown column 'refAnime' in 'from clause'
+CRITICAL - 2022-05-30 03:16:48 --> Unknown column 'refAnime' in 'from clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:16:48 --> Unknown column 'refAnime' in 'from clause'
+CRITICAL - 2022-05-30 03:16:48 --> Unknown column 'refAnime' in 'from clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:16:48 --> Unknown column 'refAnime' in 'from clause'
+CRITICAL - 2022-05-30 03:16:48 --> Unknown column 'refAnime' in 'from clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:18:03 --> Unknown column 'char.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:18:03 --> Unknown column 'char.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:18:04 --> Unknown column 'char.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:18:04 --> Unknown column 'char.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:18:05 --> Unknown column 'char.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:18:06 --> Unknown column 'char.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:18:06 --> Unknown column 'char.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:18:06 --> Unknown column 'char.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:18:06 --> Unknown column 'char.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `char`.`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `char`.`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `char`.`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `char`.`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:19:30 --> Unknown column 'anime_character.nameCharacter' in 'field list'
+CRITICAL - 2022-05-30 03:19:30 --> Unknown column 'anime_character.nameCharacter' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `anime_c...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `anime_c...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `anime_c...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `anime_c...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(68): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:20:21 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+CRITICAL - 2022-05-30 03:20:21 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `charact...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `charact...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `charact...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `charact...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(69): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:20:22 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+CRITICAL - 2022-05-30 03:20:22 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `charact...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `charact...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `charact...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `charact...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(69): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:20:22 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+CRITICAL - 2022-05-30 03:20:22 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `charact...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `charact...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `charact...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `charact...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(69): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:20:22 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+CRITICAL - 2022-05-30 03:20:22 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `charact...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `charact...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `charact...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `charact...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(69): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:20:22 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+CRITICAL - 2022-05-30 03:20:22 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `charact...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `charact...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `charact...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `charact...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(69): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 03:20:22 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+CRITICAL - 2022-05-30 03:20:22 --> Unknown column 'anime_character.refCharacter' in 'on clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `charact...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `charact...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `charact...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `charact...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(523): CodeIgniter\Model->doFind(true, '21')
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(69): CodeIgniter\BaseModel->find('21')
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 05:02:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `anime`
+JOIN `review` ON `review`.`refAnime` = `anime`.`idAnime`
+JOIN `user' at line 2
+CRITICAL - 2022-05-30 05:02:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `anime`
+JOIN `review` ON `review`.`refAnime` = `anime`.`idAnime`
+JOIN `user' at line 2
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `review`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `review`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `review`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `review`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(5, 0)
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(77): CodeIgniter\BaseModel->findAll(5)
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('1')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 05:02:25 --> Unknown column 'user.isUser' in 'on clause'
+CRITICAL - 2022-05-30 05:02:25 --> Unknown column 'user.isUser' in 'on clause'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `review`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `review`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `review`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `review`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(5, 0)
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(77): CodeIgniter\BaseModel->findAll(5)
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('1')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 05:04:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`username`
+FROM `anime`
+JOIN `review` ON `review`.`refAnime` = `anime`.`idAnime' at line 1
+CRITICAL - 2022-05-30 05:04:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`username`
+FROM `anime`
+JOIN `review` ON `review`.`refAnime` = `anime`.`idAnime' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `review`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `review`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `review`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `review`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(5, 0)
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(77): CodeIgniter\BaseModel->findAll(5)
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 05:05:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`img`
+FROM `anime`
+JOIN `review` ON `review`.`refAnime` = `anime`.`idAnime`
+JOI' at line 1
+CRITICAL - 2022-05-30 05:05:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`img`
+FROM `anime`
+JOIN `review` ON `review`.`refAnime` = `anime`.`idAnime`
+JOI' at line 1
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `review`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `review`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `review`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `review`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(5, 0)
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(77): CodeIgniter\BaseModel->findAll(5)
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-05-30 05:05:23 --> Unknown column 'user.img' in 'field list'
+CRITICAL - 2022-05-30 05:05:23 --> Unknown column 'user.img' in 'field list'
+#0 C:\wamp64\www\animelette\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `review`...', 0)
+#1 C:\wamp64\www\animelette\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `review`...')
+#2 C:\wamp64\www\animelette\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `review`...')
+#3 C:\wamp64\www\animelette\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `review`...', Array, false)
+#4 C:\wamp64\www\animelette\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\animelette\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(5, 0)
+#6 C:\wamp64\www\animelette\app\Controllers\Home.php(77): CodeIgniter\BaseModel->findAll(5)
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#8 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-05-30 05:10:01 --> Undefined index: profilePicture
+#0 C:\wamp64\www\animelette\app\Views\anime.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 169, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:13:25 --> Undefined index: like
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:13:48 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:13:49 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:13:49 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:13:49 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:13:50 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:13:50 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:18:35 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:18:36 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:18:36 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:18:36 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 05:19:01 --> Undefined index: likes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(170): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 170, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(90): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 10:52:36 --> Trying to get property 'idAnime' of non-object
+#0 C:\wamp64\www\animelette\app\Views\anime.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\wamp64\\www\\a...', 164, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 10:52:57 --> Trying to get property 'idAnime' of non-object
+#0 C:\wamp64\www\animelette\app\Views\anime.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\wamp64\\www\\a...', 164, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 10:52:59 --> Trying to get property 'idAnime' of non-object
+#0 C:\wamp64\www\animelette\app\Views\anime.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\wamp64\\www\\a...', 164, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 11:23:11 --> Undefined index: totalEpisodes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(124): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 124, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('4')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 11:23:39 --> Undefined index: totalEpisodes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(124): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 124, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('4')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 12:19:13 --> Undefined index: totalEpisodes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 125, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 12:19:22 --> Undefined index: totalEpisodes
+#0 C:\wamp64\www\animelette\app\Views\anime.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\a...', 125, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(86): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('21')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 12:43:00 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(89): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-30 12:43:14 --> Trying to access array offset on value of type null
+#0 C:\wamp64\www\animelette\app\Views\anime.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\wamp64\\www\\a...', 116, Array)
+#1 C:\wamp64\www\animelette\system\View\View.php(210): include('C:\\wamp64\\www\\a...')
+#2 C:\wamp64\www\animelette\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\animelette\system\Common.php(1089): CodeIgniter\View\View->render('anime', Array, true)
+#4 C:\wamp64\www\animelette\app\Controllers\Home.php(89): view('anime', Array)
+#5 C:\wamp64\www\animelette\system\CodeIgniter.php(832): App\Controllers\Home->anime('3')
+#6 C:\wamp64\www\animelette\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\animelette\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\animelette\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

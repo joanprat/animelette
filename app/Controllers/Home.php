@@ -55,15 +55,36 @@ class Home extends BaseController
     }
     // ? Anime functions
     public function anime ($idAnime) {
+      $tableAnime = new AnimeModel();
+      $tableList = new ListModel();
+      $tableReviews = new ReviewModel();
+      $tableLikes  = new LikeModel();
+
+      $data['reviews'] = $tableReviews ->select("user.idUser, user.username, user.profilePic, user.engagement, anime.idAnime, anime.nameJap, anime.banner, review.content, review.idReview, DATE_FORMAT(review.publicationDate, '%b %d, %Y') as 'date', COUNT(like.refReview) as 'likes'")
+                                      ->join('anime', 'anime.idAnime = review.refAnime')
+                                      ->join('user', 'user.idUser = review.refUser')
+                                      ->join('like', 'like.refReview = review.idReview', 'left')
+                                      ->orderBy('COUNT(like.refReview)', 'DESC')
+                                      ->groupBy('review.idReview')
+                                      ->where('anime.idAnime', $idAnime)
+                                      ->findAll(3);
+      
+      $data['animeData'] = $tableAnime->select("idAnime, nameEng, nameJap, synopsis, DATE_FORMAT(airingStart, '%b %d, %Y') as 'airingStart', DATE_FORMAT(airingFinish, '%b %d, %Y') as 'airingFinish', yearBroadcast, season, studio, type, totalEpisodes, duration, source, banner, img")
+                                      ->where('idAnime', $idAnime)->findAll();
+      $data['char_va'] = $tableAnime->select("character.nameCharacter, character.surnameCharacter, va.nameVa, va.surnameVa, character.img as charimg, va.img as vaimg")
+                                    ->join('anime_character', 'anime_character.refAnime = anime.idAnime')
+                                    ->join('character', 'character.idCharacter = anime_character.refChar')
+                                    ->join('va_character', 'va_character.refChar = character.idCharacter')
+                                    ->join('va', 'va.idVa = va_character.refVa')
+                                    ->where('anime.idAnime', $idAnime)
+                                    ->findAll();
+      $data['medianScore'] = $tableList->select("CAST((score) AS DECIMAL (10, 2)) as score")->find($idAnime);
       if($this->session->get('userId')) {
         $data["sessionData"] = $this->session;
+        $data["isInList"] = $tableList->where(['refUser' => $this->session->get('userId'), 'refAnime' => $idAnime])->findAll();
       }
-      $tableAnime = new AnimeModel();
-      $tableGenreAnime = new AnimeGenreModel();
-      
-      $data['animeData'] = $tableAnime->where('idAnime', $idAnime)->findAll();
-      $this->console_log($data);      
-      return view('anime');
+      $this->console_log($data);
+      return view('anime', $data);
     }
 
     /**
@@ -255,6 +276,7 @@ class Home extends BaseController
             $this->session->start();
             $this->session->set('userId', $userData->idUser);
             $this->session->set('username', $userData->username);
+            $this->session->set('pfp', $userData->profilePic);
             $data["sessionData"] = $this->session;
             return view('home', $data);
           }else {

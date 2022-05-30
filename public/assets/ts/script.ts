@@ -335,3 +335,98 @@ function likeReviewDetails(item:HTMLParagraphElement, idReview:number, idUser:nu
         alert('You must be logged in to to rate user reviews');
     }
 }
+
+function publishReview(idUser:number, idAnime:number) {
+    var review:any = document.getElementById('reviewAnime')!;
+    if(review.value != '') {
+        var req:XMLHttpRequest = new XMLHttpRequest();
+        req.onreadystatechange = function () {
+            if(this.readyState == 4 && this.status == 200) {
+                if(this.responseText == '1') {
+                    var tmp:HTMLElement = document.getElementById('review-publish')!;
+                    tmp.innerHTML = '';
+                    var div:HTMLElement = document.createElement('div');
+                    div.className = 'container text-center container-success p-4';
+                    var txt:HTMLParagraphElement = document.createElement('p');
+                    txt.className = 'p-0 m-0';
+                    txt.appendChild(document.createTextNode('Review published successfully'));
+                    div.appendChild(txt);
+                    tmp.appendChild(div);
+                }else {
+                    alert('Error publishing the review');
+                }
+            }
+        }
+        req.open('POST', '../../assets/ajax/publishReview.php', true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.send('refUser=' + idUser + "&refAnime=" + idAnime + "&content=" + review.value);
+    }else {
+        review.focus();
+    }
+}
+
+function addAnimeToList (btn:HTMLButtonElement, idUser:number, idAnime:number, maxCap:number) {
+    var form:any = document.getElementsByClassName('add-anime')!;
+    var isEmpty = false;
+    for (let i:number = 0; i < form.length; i++) {
+        if (form[i].style.visibility == '') {
+            form[i].style.visibility = 'visible';
+        }
+        if (form[i].value == '') {
+            isEmpty = true;
+        }
+    }
+
+    if(!isEmpty) {
+        form[0].value = form[0].value > maxCap ? maxCap : form[0].value;
+        form[1].value = form [1].value > 10 ? 10 : form [1].value;
+        form[0].value = form[0].value < 0 ? 0 : form[0].value;
+        form[1].value = form [1].value < 0 ? 0 : form [1].value;
+        var req:XMLHttpRequest = new XMLHttpRequest();
+        req.onreadystatechange = function () {
+            if(this.readyState == 4 && this.status == 200) {
+                console.log(this.responseText);
+                if(this.response == "true") {
+                    var tmp:HTMLElement = document.getElementById('user-anime-status')!;
+                    tmp.innerHTML = '';
+                    var div:HTMLElement = document.createElement('div');
+                    div.className = 'container text-center container-success p-4';
+                    var txt:HTMLParagraphElement = document.createElement('p');
+                    txt.className = 'p-0 m-0';
+                    txt.appendChild(document.createTextNode('New anime added to your list!'));
+                    div.appendChild(txt);
+                    tmp.appendChild(div);
+                }else {
+                    alert('Error adding anime to list');
+                }
+            }
+        }
+        req.open('POST', '../../assets/ajax/updateAnime.php', true);
+        req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        req.send('refUser=' + idUser + "&refAnime=" + idAnime + "&caps=" + form[0].value + "&score=" + form[1].value + "&status=" + form[2].value);
+    }
+}
+function removeAnimeFromList (idUser:number, idAnime:number) {
+    var req:XMLHttpRequest = new XMLHttpRequest();
+    req.onreadystatechange = function () {
+        if(this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            if(this.response == "true") {
+                var tmp:HTMLElement = document.getElementById('user-anime-status')!;
+                tmp.innerHTML = '';
+                var div:HTMLElement = document.createElement('div');
+                div.className = 'container text-center container-success p-4';
+                var txt:HTMLParagraphElement = document.createElement('p');
+                txt.className = 'p-0 m-0';
+                txt.appendChild(document.createTextNode('Anime deleted successfully'));
+                div.appendChild(txt);
+                tmp.appendChild(div);
+            }else {
+                alert('Error deletting anime from list');
+            }
+        }
+    }
+    req.open('POST', '../../assets/ajax/updateAnime.php', true);
+    req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    req.send('refUser=' + idUser + "&refAnime=" + idAnime);
+}

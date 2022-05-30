@@ -13,6 +13,7 @@ class AnimeModel extends Model {
         "airingStart",
         "airingFinish",
         "yearBroadcast",
+        "synopsis",
         "season",
         "studio",
         "type",

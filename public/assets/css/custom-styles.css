@@ -1038,15 +1038,11 @@ footer h2 {
 }
 
 .btn-add {
-  background-color: #16ff3c;
+  background-color: #764AF1;
   border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  /* display: inline-block; */
-  
-  border-radius: 15px;
+  color: #F4F4F4;
+  font-weight: 700;
+  border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -1059,17 +1055,7 @@ footer h2 {
   text-align: center;
   text-decoration: none;
   /* display: inline-block; */
-  border-radius: 15px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.btn-submit {
-  background: rgb(0, 149, 255);
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .rectangle img{
@@ -1088,9 +1074,6 @@ footer h2 {
   margin: 0%;
 }
 
-.estrella{
-  color: #21D754 !important;
-}
 
 .campo-reviews{
   border-radius: 20px;
@@ -1098,4 +1081,100 @@ footer h2 {
 
 .pfp-mini img{
   width: 70px;
+}
+
+.anime-info .title{
+  font-size: 1.7em;
+  font-weight: 700;
+  color: #764AF1;
+}
+.anime-info .score {
+  font-size: 1em;
+  font-weight: 700;
+  color: #38383875;
+}
+.score .estrella {
+  color: #764AF1 !important;
+}
+.char-va img{
+  border-radius: 10px;
+  /* transform: scale(1.05); */
+  box-shadow: 8px 8px 0px rgba(123, 0, 255, 0.663);
+}
+.char-va .name-char {
+  color: #764AF1;
+  font-weight: 700;
+}
+.char-va .name-va {
+  color: #F03ADF;
+  font-weight: 700;
+}
+.char-va p {
+  color: #323232;
+  font-weight: 700;
+}
+.section-title {
+  color: #764AF1;
+  font-weight: 700;
+  font-size: 1.7em;
+}
+.review-anime textarea{
+  width: 100% !important;
+  height: 100%
+}
+.review-anime textarea {
+  border: none !important;
+  border-top: 4px solid #764AF1 !important;
+}
+.review-anime img {
+  border-radius: 5px;
+}
+.review-anime textarea:focus {
+  outline: none !important;
+}
+.review-anime .custom-btn {
+  background-color: #764AF1 !important;
+  color: #F4F4F4;
+  font-weight: 700;
+}
+.review-anime .custom-btn:hover {
+  background-color: #764AF1 !important;
+  color: #F4F4F4;
+  font-weight: 700;
+}
+.profile-link {
+  color: #764AF1;
+  font-weight: 700;
+  text-decoration: none;
+}
+.profile-link:hover {
+  color: #764AF1;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.container-success {
+  color: #FFFFFF;
+  font-weight: 700;
+  background-color: #95CD41 !important;
+}
+.anime-info input{
+  visibility: hidden;
+  border: none;
+  border-left: 4px solid #764AF1;
+  border-radius: 0px 10px 10px 0px;
+  width: 100%;
+}
+.anime-info input:focus{
+  border: none;
+  border-left: 4px solid #764AF1;
+  border-radius: 0px 10px 10px 0px;
+  width: 100%;
+}
+.anime-info select{
+  visibility: hidden;
+  color: #6C757D !important;
+  border: none;
+  border-left: 4px solid #764AF1;
+  border-radius: 0px 10px 10px 0px;
+  width: 100%;
 }
