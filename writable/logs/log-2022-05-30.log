@@ -1,0 +1,3 @@
+CRITICAL - 2022-05-30 02:20:32 --> Cannot use App\Models\AnimeModel as AnimeModel because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

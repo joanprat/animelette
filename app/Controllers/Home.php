@@ -8,7 +8,6 @@ use App\Models\FollowerModel;
 use App\Models\AnimeModel;
 use App\Models\ReviewModel;
 use App\Models\LikeModel;
-use App\Models\AnimeModel;
 use App\Models\AnimeGenreModel;
 
 /**
