@@ -68,5 +68,33 @@
         <!-- // ! TODO - Branch anime -->
         <p style="color: #F03ADF; font-size: 4em; font-weight: 900;">&#60 Anime page building in progress &#62</p>
     </section>
+    <footer class='container-fluid py-5'>
+        <div class="container">
+            <div class="row text-center">
+                <div class="container col text-start">
+                    <h2><img src="<?= base_url('assets/pictures/logo.png')?>" width="160"></h2>
+                    <ul class='primerUl'>
+                        <li><a href='<?= $fullPath ?>'>Home</a></li>
+                        <li><a href='<?= $fullPath."/explore" ?>'>Explore</a></li>
+                        <li><a href='<?= $fullPath."/reviews" ?>'>Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="conatiner col sns">
+                    <h2><strong>ANIMELETTE IN SNS</strong></h2>
+                    <p>Follow us in social media</p>
+                    <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                    <a href=""><i class='bx bxl-twitter' ></i></a>
+                    <a href=""><i class='bx bxl-instagram-alt' ></i></a>
+                    <a href="https://github.com/joanprat/animelette"><i class='bx bxl-github' ></i></a>
+                </div>
+                <div class="conatiner col donate">
+                    <h2><strong>HELP US TO BUID ANIMELETTE</strong></h2>
+                    <p>If you like our work think about giving a donation!</p>
+                    <a href=""><i class='bx bx-coffee-togo' ></i></a>
+                    <a href=""><i class='bx bxl-patreon' ></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

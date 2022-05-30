@@ -137,11 +137,11 @@
             </div>
   </div>
 </section>
-<footer class='container-fluid py-4'>
+<footer class='container-fluid py-5'>
     <div class="container">
         <div class="row text-center">
             <div class="container col text-start">
-                <h2><strong>ANIMELETTE</strong></h2>
+                <h2><img src="<?= base_url('assets/pictures/logo.png')?>" width="160"></h2>
                 <ul class='primerUl'>
                     <li><a href='<?= $fullPath ?>'>Home</a></li>
                     <li><a href='<?= $fullPath."/explore" ?>'>Explore</a></li>

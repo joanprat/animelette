@@ -128,9 +128,6 @@ nav a {
     border-radius: 10px;
     overflow: hidden;
 }
-.carousel-item img {
-    /* filter: brightness(45%); */
-}
 .login-section h5 {
   font-weight: bold;
 }
