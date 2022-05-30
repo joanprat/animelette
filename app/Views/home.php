@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animelette</title>
+    <link rel="icon" href="<?= base_url('assets/pictures/logo_small.png')?>">
     <!-- Custom -->
     <link rel="stylesheet" href="<?= base_url('assets/css/custom-styles.css')?>">
     <!-- Bootstrap -->
@@ -33,8 +34,10 @@
 
     <video src="<?= base_url('assets/img/videokimetsu.mp4') ?>" autoplay loop muted plays-inline class="backvideo"> </video>
     <nav class="navbar navbar-expand-lg nav-background-opacity ">
-        <div class="container text-cemter">
-            <a class="navbar-brand" href="<?= $fullPath ?>">ANIMELETTE</a>
+        <div class="container">
+
+        <a class="navbar-brand" href="<?= $fullPath ?>"><img src="<?= base_url('assets/pictures/logo.png')?>" width="200"></a>  <!-- LOGO -------->
+
             <span class="navbar-toggler bi bi-list" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="col-6"></div>
@@ -139,7 +142,7 @@
     <footer class='container-fluid'>
         <div class="row mt-4">
             <div class="container col ms-5">
-                <h2><strong>ANIMELETTE</strong></h2>
+                <img src="<?= base_url('assets/pictures/logo.png')?>" class="mb-4">
                 <ul class='primerUl'>
                     <li><a href='#'>Explore</a></li>
                     <li><a href='#'>Social</a></li>
