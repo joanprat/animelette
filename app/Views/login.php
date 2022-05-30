@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animelette</title>
+    <link rel="icon" href="<?= base_url('assets/pictures/logo_small.png')?>">
     <!-- Custom -->
     <link rel="stylesheet" href="<?= base_url('assets/css/custom-styles.css')?>">
     <!-- Bootstrap -->
@@ -15,8 +16,8 @@
 <?php $fullPath = base_url('Home') ?>
 <body class="login-body">
     <nav class="navbar navbar-expand-lg">
-        <div class="container text-cemter">
-            <a class="navbar-brand" href="<?= $fullPath ?>">ANIMELETTE</a>
+        <div class="container">
+            <a class="navbar-brand" href="<?= $fullPath ?>"><img src="<?= base_url('assets/pictures/logo.png')?>" width="200"></a>
             <span class="navbar-toggler bi bi-list" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="col-6"></div>
@@ -73,20 +74,45 @@
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="<?= base_url('assets/img/login-banner-1.png') ?>" class="d-block w-100" alt="...">
+                                    <img src="<?= base_url('assets/pictures/banner1.jpg') ?>" class="d-block w-100" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>Share your thougths</h5>
                                         <p>Write reviews and share them with the comunity. Rate and give award to other writters.</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="<?= base_url('assets/img/login-banner-2.png') ?>" class="d-block w-100" alt="...">
+                                    <img src="<?= base_url('assets/pictures/banner2.jpg') ?>" class="d-block w-100" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>Rate your favourite series</h5>
                                         <p>Add your favourite anime to your list and give it an appropiate score</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="<?= base_url('assets/pictures/banner3.jpg') ?>" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Discover your obsessions</h5>
+                                        <p>Find about great animes you've never seen before</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="<?= base_url('assets/pictures/banner4.jpg') ?>" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Be an expert</h5>
+                                        <p>You can view all the relevant information of each anime including the studio, the production company or the dubbing cast.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="<?= base_url('assets/pictures/banner5.jpg') ?>" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Stay tuned</h5>
+                                        <p>Be the first to know when a new chapter is released.</p>
                                     </div>
                                 </div>
                             </div>

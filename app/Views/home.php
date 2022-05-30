@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animelette</title>
+    <link rel="icon" href="<?= base_url('assets/pictures/logo_small.png')?>">
     <!-- Custom -->
     <link rel="stylesheet" href="<?= base_url('assets/css/custom-styles.css')?>">
     <!-- Bootstrap -->
@@ -33,8 +34,10 @@
 
     <video src="<?= base_url('assets/img/videokimetsu.mp4') ?>" autoplay loop muted plays-inline class="backvideo"> </video>
     <nav class="navbar navbar-expand-lg nav-background-opacity ">
-        <div class="container text-cemter">
-            <a class="navbar-brand" href="<?= $fullPath ?>">ANIMELETTE</a>
+        <div class="container">
+
+        <a class="navbar-brand" href="<?= $fullPath ?>"><img src="<?= base_url('assets/pictures/logo.png')?>" width="200"></a>  <!-- LOGO -------->
+
             <span class="navbar-toggler bi bi-list" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></span>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="col-6"></div>
@@ -134,38 +137,33 @@
             </div>
   </div>
 </section>
-
-
-    <footer class='container-fluid py-4'>
-        <div class="container">
-            <div class="row text-center">
-                <div class="container col text-start">
-                    <h2><strong>ANIMELETTE</strong></h2>
-                    <ul class='primerUl'>
-                        <li><a href='<?= $fullPath ?>'>Home</a></li>
-                        <li><a href='<?= $fullPath."/explore" ?>'>Explore</a></li>
-                        <li><a href='<?= $fullPath."/reviews" ?>'>Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="conatiner col sns">
-                    <h2><strong>ANIMELETTE IN SNS</strong></h2>
-                    <p>Follow us in social media</p>
-                    <a href=""><i class='bx bxl-facebook-circle'></i></a>
-                    <a href=""><i class='bx bxl-twitter' ></i></a>
-                    <a href=""><i class='bx bxl-instagram-alt' ></i></a>
-                    <a href="https://github.com/joanprat/animelette"><i class='bx bxl-github' ></i></a>
-                </div>
-                <div class="conatiner col donate">
-                    <h2><strong>HELP US TO BUID ANIMELETTE</strong></h2>
-                    <p>If you like our work think about giving a donation!</p>
-                    <a href=""><i class='bx bx-coffee-togo' ></i></a>
-                    <a href=""><i class='bx bxl-patreon' ></i></a>
-                </div>
+<footer class='container-fluid py-4'>
+    <div class="container">
+        <div class="row text-center">
+            <div class="container col text-start">
+                <h2><strong>ANIMELETTE</strong></h2>
+                <ul class='primerUl'>
+                    <li><a href='<?= $fullPath ?>'>Home</a></li>
+                    <li><a href='<?= $fullPath."/explore" ?>'>Explore</a></li>
+                    <li><a href='<?= $fullPath."/reviews" ?>'>Reviews</a></li>
+                </ul>
+            </div>
+            <div class="conatiner col sns">
+                <h2><strong>ANIMELETTE IN SNS</strong></h2>
+                <p>Follow us in social media</p>
+                <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                <a href=""><i class='bx bxl-twitter' ></i></a>
+                <a href=""><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://github.com/joanprat/animelette"><i class='bx bxl-github' ></i></a>
+            </div>
+            <div class="conatiner col donate">
+                <h2><strong>HELP US TO BUID ANIMELETTE</strong></h2>
+                <p>If you like our work think about giving a donation!</p>
+                <a href=""><i class='bx bx-coffee-togo' ></i></a>
+                <a href=""><i class='bx bxl-patreon' ></i></a>
             </div>
         </div>
-
-    </footer>
-
-
+    </div>
+</footer>
 </body>
 </html>
