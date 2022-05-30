@@ -76,7 +76,7 @@
                     <div class="review-container my-5 <?php for ($i = 0; $i < sizeof($currentUserLikes); $i++) { if($currentUserLikes[$i]['refReview'] == $review['idReview']) { echo 'active-review'; } } ?>" id="reviewContainer<?= $review['idReview'] ?>">
                         <div class="d-flex flex-row">
                             <!-- Userprofile -->
-                            <div class="col-3 align-self-center">
+                            <div class="col-3 align-self-center d-none d-md-block">
                                 <div class="container review-profile py-4">
                                     <a href="<?= $fullPath."/profile"."/".$review['idUser'] ?>"><img src="<?= base_url('assets/pictures').'/'.$review['profilePic'] ?>" alt="Review <?= $review['idReview'] ?> profile pic"></a>
                                     <p class="mt-3 mb-2"><?= $review['username'] ?></p>
@@ -87,10 +87,10 @@
                             <div class="col-9 text-start white-container-2">
                                 <div class="container review-content px-5 py-2">
                                     <a class="anime-title mt-4 mb-0" href="<?= $fullPath."/anime"."/".$review['idAnime'] ?>"><?= $review['nameJap'] ?></a>
-                                    
                                     <div class="d-flex flex-row">
                                         <p class="publication-date"><?= $review['date'] ?></p>
-                                        <p class="ms-2 engagement" id="reviewEngagement<?= $review["idReview"] ?>"><span class='bx bxs-hot'></span><?= $review['likes'] ?></p>  
+                                        <p class="ms-2 engagement me-2" id="reviewEngagement<?= $review["idReview"] ?>"><span class='bx bxs-hot'></span><?= $review['likes'] ?></p>  
+                                        <a class="user-mobile d-block d-md-none d-lg-none" href="<?= $fullPath."/profile"."/".$review['idUser'] ?>">By <?= $review['username'] ?></a>
                                     </div>
                                     
                                     <p class="review-text"><?= substr($review['content'], 0, 400) ?>...</p>
@@ -98,7 +98,7 @@
                                 </div>                            
                             </div>
                         </div>
-                        <div class="container-fluid col-12 review-footer p-0">
+                        <div class="container-fluid col-12 review-footer p-0 d-none d-md-block">
                             <div class="d-flex flex-row">
                                 <div class="col-3">
                                     <div class="container-fluid p-0">
@@ -110,6 +110,12 @@
                                         <p class="like m-0 <?php for ($i = 0; $i < sizeof($currentUserLikes); $i++) { if($currentUserLikes[$i]['refReview'] == $review['idReview']) { echo 'engagement'; } } ?>" id="reviewContainer<?= $review['idReview'] ?>" onclick="likeReview(this, <?= $review['idReview'] ?>, <?= $review['idUser'] ?>, <?= isset($sessionData->userId) ? $sessionData->userId : null  ?>)"><span class='bx bxs-hot'></span> This is fire!</p>
                                     </div>
                                 </div>                            
+                            </div>
+                        </div>
+                        <!-- Footer mobile -->
+                        <div class="container-fluid col-12 review-footer d-block d-md-none d-lg-none d-xl-none">
+                            <div class="container py-2">
+                                <p class="like m-0 <?php for ($i = 0; $i < sizeof($currentUserLikes); $i++) { if($currentUserLikes[$i]['refReview'] == $review['idReview']) { echo 'engagement'; } } ?>" id="reviewContainer<?= $review['idReview'] ?>" onclick="likeReview(this, <?= $review['idReview'] ?>, <?= $review['idUser'] ?>, <?= isset($sessionData->userId) ? $sessionData->userId : null  ?>)"><span class='bx bxs-hot'></span> This is fire!</p>
                             </div>
                         </div>
                     </div>
