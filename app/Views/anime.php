@@ -113,7 +113,7 @@
                 <div class="col-sm-8">
                     <div class="container text-start anime-info my-4">
                         <p class="title mb-0"><?= $animeData[0]["nameJap"] ?></p>
-                        <p class="score"><?= "Score ".$medianScore["score"] ?> <span class="bi bi-star-fill estrella"></span></p>
+                        <p class="score"><?= isset($medianScore["score"]) > 0 ? "Score ".$medianScore["score"] : "Score -" ?> <span class="bi bi-star-fill estrella"></span></p>
                         <p><?= $animeData[0]["synopsis"] ?></p>
                         <?php if (isset($sessionData)) { ?>
                         <div class="d-flex flex-row align-items-center text-center" id="user-anime-status">
